@@ -1,0 +1,9 @@
+/* 第 3 周开始写样式。
+   本周先留一个占位，保证 index.html 的 <link> 不报 404。 */
+
+body {
+  margin: 0;
+  padding: 1rem;
+  font-family: system-ui, -apple-system, "Microsoft YaHei", sans-serif;
+  line-height: 1.6;
+}
