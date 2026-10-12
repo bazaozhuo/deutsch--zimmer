@@ -1,48 +1,79 @@
 <!DOCTYPE html>
-<!--
-  第 1 周：首页骨架。
-  现在还很朴素是对的 —— 第 3 周才加 CSS 样式，第 6 周做响应式，第 7 周加交互。
-  本周任务清单：
-   [ ] 把 <title> 和下面每处 TODO 换成自己的内容
-   [ ] 提交并推到 GitHub，打开 Pages，把网址填进 README.md
-   [ ] 在 DECISIONS.md 写下第 1 条决策
--->
 <html lang="zh-CN">
 <head>
-  <!-- 中文内容用 zh-CN；如果整页是德语，改成 lang="de" -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TODO 站点标题</title>
+  <title>德语 A2→B1 自学站｜一个中国学生的进阶记录</title>
+  <meta name="description" content="从德语 A2 到 B1 的自学记录：每周怎么学、用什么材料、哪些语法必须补。">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <header>
-    <p class="site-title">TODO 站点名</p>
-    <!-- 第 2 周再加第二页；现在只链当前页，避免死链 -->
+    <p class="site-title">德语 A2 → B1 自学站</p>
     <nav aria-label="主导航">
       <ul>
         <li><a href="index.html" aria-current="page">首页</a></li>
+        <li><a href="lernen.html">学习方法</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <h1>TODO 首页大标题</h1>
+    <h1>从 A2 走到 B1，我把这条路记下来</h1>
+    <p>课堂能给你语法表，但不会给你每周的时间表。缺的从来不是教材，是「每天具体做什么」。</p>
 
-    <section aria-labelledby="intro-heading">
-      <h2 id="intro-heading">这个网站是什么</h2>
-      <p>TODO 用两三句自己的话写清：给谁看、能帮上什么忙。</p>
+    <section aria-labelledby="warum">
+      <h2 id="warum">为什么有这个站</h2>
+      <p>我是海南比勒费尔德应用科学大学计算机科学专业的学生，德语是我的副专业。课上到 A2 之后，我发现真正卡住我的不是某个语法点，而是三件事：<strong>材料太多不知道选哪个、每周排不出固定时间、学了不知道有没有进步</strong>。</p>
+      <p>所以我一边走一边把方法记在这里。它首先是给我自己用的行动清单，其次才是给处境相似的人（中文母语、课业不轻、只有碎片时间）看的参考。</p>
     </section>
 
-    <section aria-labelledby="content-heading">
-      <h2 id="content-heading">TODO 内容区标题</h2>
-      <p>TODO 这里放真正的内容，不是占位符。</p>
+    <section aria-labelledby="stand">
+      <h2 id="stand">我的起点和现状</h2>
+      <table>
+        <caption>个人德语学习进度（2026 年秋季）</caption>
+        <tbody>
+          <tr><th scope="row">起点</th><td>A2（学校德语副专业课程）</td></tr>
+          <tr><th scope="row">现状</th><td>冲 B1：能读慢速新闻，能写 80–120 词的邮件（比如回德国朋友的中秋问候）</td></tr>
+          <tr><th scope="row">目标</th><td>能选德语授课的专业课，能独立应付实习面试对话</td></tr>
+          <tr><th scope="row">每周投入</th><td>约 5 小时，拆成每天 30–45 分钟</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section aria-labelledby="inhalt">
+      <h2 id="inhalt">这个站有什么</h2>
+      <ul>
+        <li><a href="lernen.html">学习方法</a> —— 词汇、听力、语法、写作口语四条线，每条给具体材料和每周安排</li>
+        <li>语法清单 —— A2 升 B1 必须补的 8 个点，写在「学习方法」页里</li>
+        <li>词汇表 + 自测小测验（正在写，第一版放 A2 高频动词）</li>
+        <li>联系页（正在写）</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="woche">
+      <h2 id="woche">我现在每周怎么过</h2>
+      <table>
+        <caption>一周德语学习时间表</caption>
+        <thead>
+          <tr><th scope="col">星期</th><th scope="col">做什么</th><th scope="col">时长</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>周一</td><td>词汇：20 个新词，卡在句子里的那种</td><td>25 分钟</td></tr>
+          <tr><td>周二</td><td>听力：DW 慢速新闻精听一段，跟读三遍</td><td>30 分钟</td></tr>
+          <tr><td>周三</td><td>语法：只补一个点，做 10 道题</td><td>30 分钟</td></tr>
+          <tr><td>周四</td><td>写作：100 词短文（邮件/日记/观点）</td><td>40 分钟</td></tr>
+          <tr><td>周五</td><td>口语：录音复述周二听的内容</td><td>20 分钟</td></tr>
+          <tr><td>周六</td><td>看德语视频（Nicos Weg / Easy German），不查词典硬看</td><td>40 分钟</td></tr>
+          <tr><td>周日</td><td>整理错题本，把本周新词过一遍</td><td>30 分钟</td></tr>
+        </tbody>
+      </table>
     </section>
   </main>
 
   <footer>
-    <p>© 2026 TODO 你的名字</p>
+    <p>© 2026 揣卓扬 · 本站是 Web Development 课程项目，内容与代码均由本人编写。</p>
   </footer>
 
   <script src="js/main.js"></script>
