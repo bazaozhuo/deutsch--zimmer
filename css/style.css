@@ -1,9 +1,247 @@
-/* 第 3 周开始写样式。
-   本周先留一个占位，保证 index.html 的 <link> 不报 404。 */
+/* ===========================================================
+   德语 A2→B1 自学站 —— 全站样式
+   W2：设计基调（颜色变量、字号层级、间距、表格、表单、按钮）
+   W3 再补：媒体查询、多列布局、真机细节
+   =========================================================== */
+
+:root {
+  --ink: #1b1b1b;          /* 正文 */
+  --ink-soft: #4a4a4a;     /* 次要文字 */
+  --paper: #fbf9f4;        /* 页面底色（米白，比纯白柔和） */
+  --card: #ffffff;
+  --line: #e2ded4;         /* 分隔线 */
+  --accent: #b8141e;       /* 主色：德国红 */
+  --accent-dark: #8f0f17;
+  --gold: #c9982b;         /* 点缀色 */
+  --radius: 10px;
+  --max-width: 66rem;
+}
+
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
-  padding: 1rem;
-  font-family: system-ui, -apple-system, "Microsoft YaHei", sans-serif;
-  line-height: 1.6;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
 }
+
+/* 让每个页头/主体/页脚的直接子元素居中并限宽（不用额外包一层 div） */
+header > *, main > *, footer > * {
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---------- 页头与导航 ---------- */
+header {
+  background: var(--card);
+  border-bottom: 1px solid var(--line);
+  padding: 1rem 1.25rem 0.9rem;
+}
+
+.site-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.5rem;
+}
+.site-title a { color: var(--ink); text-decoration: none; }
+.site-title a:hover { color: var(--accent); }
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 1.4rem;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0.2rem 0;
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+nav a:hover { color: var(--accent); }
+nav a[aria-current="page"] {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+  font-weight: 600;
+}
+nav a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ---------- 正文排版 ---------- */
+main { padding: 2.25rem 1.25rem 3rem; }
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.25;
+  margin: 0 0 1rem;
+  letter-spacing: -0.01em;
+}
+h1 + p {
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+}
+
+h2 {
+  font-size: 1.35rem;
+  margin: 2.4rem 0 0.8rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid var(--line);
+}
+h3 { font-size: 1.1rem; margin: 1.5rem 0 0.5rem; }
+
+p { margin: 0 0 1rem; }
+
+a { color: var(--accent); text-underline-offset: 2px; }
+a:hover { color: var(--accent-dark); }
+
+ul, ol { padding-left: 1.3rem; }
+li { margin-bottom: 0.4rem; }
+
+/* ---------- 卡片（每条学习方法是一个 article） ---------- */
+article {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 1.3rem 1.4rem 0.6rem;
+  margin-bottom: 1.4rem;
+}
+article h2 {
+  margin-top: 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 1.2rem;
+}
+
+/* ---------- 表格 ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 1.6rem;
+  background: var(--card);
+  font-size: 0.95rem;
+}
+caption {
+  text-align: left;
+  color: var(--ink-soft);
+  font-size: 0.875rem;
+  padding-bottom: 0.5rem;
+}
+th, td {
+  text-align: left;
+  padding: 0.6rem 0.7rem;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+thead th {
+  background: #f3efe6;
+  border-bottom: 2px solid var(--accent);
+  font-weight: 600;
+  white-space: nowrap;
+}
+tbody tr:hover { background: #fbf6ec; }
+
+/* 词汇表：德语列窄、例句列淡 */
+table.vokabeln th[scope="row"] { width: 20%; font-weight: 600; }
+table.vokabeln .beispiel { color: var(--ink-soft); }
+
+/* ---------- 表单 ---------- */
+.field { margin: 0 0 1.1rem; }
+
+label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.35rem;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.6rem 0.7rem;
+  font: inherit;
+  color: inherit;
+  background: var(--card);
+  border: 1px solid #cfc9bb;
+  border-radius: 6px;
+}
+input:hover, select:hover, textarea:hover { border-color: #b3ac9c; }
+input:focus, select:focus, textarea:focus {
+  outline: 3px solid rgba(184, 20, 30, 0.22);
+  border-color: var(--accent);
+}
+textarea { resize: vertical; }
+
+.hint {
+  display: block;
+  color: var(--ink-soft);
+  font-size: 0.875rem;
+  margin-top: 0.35rem;
+}
+
+/* ---------- 按钮 ---------- */
+.btn, .filter-buttons button {
+  font: inherit;
+  cursor: pointer;
+  padding: 0.55rem 1.15rem;
+  border-radius: 6px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+}
+.btn:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
+
+.btn:focus-visible,
+.filter-buttons button:focus-visible {
+  outline: 3px solid rgba(184, 20, 30, 0.35);
+  outline-offset: 2px;
+}
+
+/* 筛选按钮：未选中是描边，选中是实心 */
+.filter { margin-bottom: 1rem; }
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.75rem 0;
+}
+.filter-buttons button {
+  background: var(--card);
+  color: var(--ink);
+  border-color: #cfc9bb;
+  font-weight: 500;
+  padding: 0.4rem 0.9rem;
+}
+.filter-buttons button:hover { border-color: var(--accent); color: var(--accent); }
+.filter-buttons button[aria-pressed="true"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+/* ---------- 状态提示与页脚 ---------- */
+#form-status {
+  min-height: 1.6rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+footer {
+  background: var(--card);
+  border-top: 1px solid var(--line);
+  padding: 1.5rem 1.25rem 2rem;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+footer p { margin: 0; }
