@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>联系｜德语 A2→B1 自学站</title>
+  <meta name="description" content="给站长留言：词表纠错、材料建议，或者你也在从 A2 走到 B1 的路上。">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <p class="site-title"><a href="index.html">德语 A2 → B1 自学站</a></p>
+    <nav aria-label="主导航">
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="lernen.html">学习方法</a></li>
+        <li><a href="vokabeln.html">词汇表</a></li>
+        <li><a href="kontakt.html" aria-current="page">联系</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>联系我</h1>
+    <p>这个站是我一个人在做。发现错字、有材料建议，或者你也在 A2 到 B1 的路上 —— 都欢迎写一封。</p>
+
+    <section aria-labelledby="form-h">
+      <h2 id="form-h">写一封</h2>
+      <form id="kontakt-form">
+        <p class="field">
+          <label for="name">你的名字</label>
+          <input type="text" id="name" name="name" required autocomplete="name">
+        </p>
+
+        <p class="field">
+          <label for="email">邮箱</label>
+          <input type="email" id="email" name="email" required autocomplete="email" placeholder="name@example.com">
+        </p>
+
+        <p class="field">
+          <label for="thema">主题</label>
+          <select id="thema" name="thema" required>
+            <option value="">请选择…</option>
+            <option>词表里有错误</option>
+            <option>学习方法/材料建议</option>
+            <option>网站本身的问题</option>
+            <option>其他</option>
+          </select>
+        </p>
+
+        <p class="field">
+          <label for="nachricht">留言</label>
+          <textarea id="nachricht" name="nachricht" rows="6" required minlength="10"
+                    aria-describedby="nachricht-hinweis"></textarea>
+          <span class="hint" id="nachricht-hinweis">至少 10 个字。请不要写身份证号、住址等隐私信息。</span>
+        </p>
+
+        <button type="submit" class="btn">发送</button>
+      </form>
+
+      <p id="form-status" role="status" aria-live="polite"></p>
+
+      <p class="hint">说明：本站是课程项目，没有后端服务器。表单只做前端校验并给出确认信息，不会真的发出邮件 —— 这是有意的设计取舍，不是缺陷。</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 揣卓扬 · 本站是 Web Development 课程项目，内容与代码均由本人编写。</p>
+  </footer>
+
+  <script src="js/kontakt.js"></script>
+</body>
+</html>
