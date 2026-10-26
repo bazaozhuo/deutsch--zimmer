@@ -3,109 +3,117 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>学习方法｜德语 A2→B1 自学站</title>
+  <title data-i18n="page.methods.title">学习方法｜德语 A2→B1 自学站</title>
   <meta name="description" content="词汇、听力、语法、写作口语四条学习线，以及 A2 升 B1 必补的 8 个语法点。">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <header>
-    <p class="site-title"><a href="index.html">德语 A2 → B1 自学站</a></p>
-    <nav aria-label="主导航">
+    <div class="header-top">
+      <p class="site-title"><a href="index.html" data-i18n="site.title">德语 A2 → B1 自学站</a></p>
+      <button type="button" class="lang-toggle" id="lang-toggle"
+              data-i18n="lang.button" data-i18n-aria-label="lang.aria">EN</button>
+    </div>
+    <nav aria-label="主导航" data-i18n-aria-label="nav.main">
       <ul>
-        <li><a href="index.html">首页</a></li>
-        <li><a href="lernen.html" aria-current="page">学习方法</a></li>
-        <li><a href="vokabeln.html">词汇表</a></li>
-        <li><a href="kontakt.html">联系</a></li>
+        <li><a href="index.html" data-i18n="nav.home">首页</a></li>
+        <li><a href="lernen.html" aria-current="page" data-i18n="nav.methods">学习方法</a></li>
+        <li><a href="vokabeln.html" data-i18n="nav.vocab">词汇表</a></li>
+        <li><a href="kontakt.html" data-i18n="nav.contact">联系</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <h1>学习方法：四条线，天天都动一点</h1>
-    <p>B1 不是靠突击背出来的，是靠四条线同时缓慢推进。下面每条都写清：怎么练、用什么材料、每周多少时间。</p>
+    <h1 data-i18n="methods.h1">学习方法：四条线，天天都动一点</h1>
+    <p data-i18n="methods.lead">B1 不是靠突击背出来的，是靠四条线同时缓慢推进。下面每条都写清：怎么练、用什么材料、每周多少时间。</p>
 
     <section aria-labelledby="material">
-      <h2 id="material">我的材料就三类</h2>
+      <h2 id="material" data-i18n="methods.material.h2">我的材料就三类</h2>
       <ul>
-        <li><strong>课本</strong>（主线）—— 跟着学校德语课的教材和进度走，不另起炉灶</li>
-        <li><strong>辅助材料</strong> —— 练习册、词典 App（查例句和变位）、课本配套音频</li>
-        <li><strong>自己造的</strong> —— 错题本、抽认卡、每周写完的作文</li>
+        <li><strong data-i18n="methods.material.li1.s">课本</strong><span data-i18n="methods.material.li1.r">（主线）—— 跟着学校德语课的教材和进度走，不另起炉灶</span></li>
+        <li><strong data-i18n="methods.material.li2.s">辅助材料</strong><span data-i18n="methods.material.li2.r"> —— 练习册、词典 App（查例句和变位）、课本配套音频</span></li>
+        <li><strong data-i18n="methods.material.li3.s">自己造的</strong><span data-i18n="methods.material.li3.r"> —— 错题本、抽认卡、每周写完的作文</span></li>
       </ul>
-      <p>原则：<strong>课本是主线，辅助材料只用来解决课本解决不了的问题</strong>。不追新 App —— 换材料的时间不如用来多练一遍。</p>
+      <p><strong data-i18n="methods.material.p.s">原则：课本是主线，辅助材料只用来解决课本解决不了的问题</strong><span data-i18n="methods.material.p.r">。不追新 App —— 换材料的时间不如用来多练一遍。</span></p>
     </section>
 
     <article aria-labelledby="wortschatz">
-      <h2 id="wortschatz">一、词汇：卡在句子里的词才记得住</h2>
-      <p>我不再背单词表。一个词只在我见过它出现的句子里才算学会 —— 比如 <strong>der Mondkuchen</strong>（月饼）我是从回德国朋友的中秋邮件里记住的，比抄十遍有用。</p>
+      <h2 id="wortschatz" data-i18n="methods.wort.h2">一、词汇：卡在句子里的词才记得住</h2>
+      <p><span data-i18n="methods.wort.p1a">我不再背单词表。一个词只在我见过它出现的句子里才算学会 —— 比如 </span><strong lang="de" data-i18n="methods.wort.p1s">der Mondkuchen</strong><span data-i18n="methods.wort.p1b">（月饼）我是从回德国朋友的中秋邮件里记住的，比抄十遍有用。</span></p>
       <ul>
-        <li><strong>怎么练</strong>：每天 20 个词，每个词配一个自己造的句子；用 Anki 做抽认卡，正面写句子留空，背面填词</li>
-        <li><strong>主题优先</strong>：先啃高频主题词族 —— 学习、家庭、节日、工作、旅行，而不是按字母表背</li>
-        <li><strong>材料</strong>：课本词表打底 + 一个抽认卡 App（我用 Anki）+ 词典 App 查例句</li>
+        <li><strong data-i18n="methods.wort.li1.s">怎么练</strong><span data-i18n="methods.wort.li1.r">：每天 20 个词，每个词配一个自己造的句子；用抽认卡，正面写挖空的句子，背面写词</span></li>
+        <li><strong data-i18n="methods.wort.li2.s">主题优先</strong><span data-i18n="methods.wort.li2.r">：先啃高频主题词族 —— 学习、家庭、节日、工作、旅行，而不是按字母表背</span></li>
+        <li><strong data-i18n="methods.wort.li3.s">材料</strong><span data-i18n="methods.wort.li3.r">：课本词表打底 + 一个抽认卡 App（我用 Anki）+ 词典 App 查例句</span></li>
       </ul>
     </article>
 
     <article aria-labelledby="hoeren">
-      <h2 id="hoeren">二、听力：精听一段，胜过泛听十段</h2>
-      <p>A2 的人都卡在"听不清词与词的分界"。解决办法是精听：一段 1 分钟的音频，反复听到能写下每个词。</p>
+      <h2 id="hoeren" data-i18n="methods.hoeren.h2">二、听力：精听一段，胜过泛听十段</h2>
+      <p data-i18n="methods.hoeren.p1">A2 的人都卡在「听不清词与词的分界」。解决办法是精听：一段 1 分钟的音频，反复听到能写下每个词。</p>
       <ol>
-        <li>第一遍：只听，抓大意，不暂停</li>
-        <li>第二遍：逐句暂停，写下听到的（写不全也要写）</li>
-        <li>对照原文，把听错的词标出来（通常都是弱读的小词：<em>ich / auch / nicht / schon</em>）</li>
-        <li>最后跟读三遍，模仿语调和停顿</li>
+        <li data-i18n="methods.hoeren.li1">第一遍：只听，抓大意，不暂停</li>
+        <li data-i18n="methods.hoeren.li2">第二遍：逐句暂停，写下听到的（写不全也要写）</li>
+        <li data-i18n="methods.hoeren.li3">对照原文，把听错的词标出来（通常都是弱读的小词：ich / auch / nicht / schon）</li>
+        <li data-i18n="methods.hoeren.li4">最后跟读三遍，模仿语调和停顿</li>
       </ol>
-      <p>材料：<strong>课本配套音频</strong>打底（最贴近考试语速）；有余力再拿 <a href="https://learngerman.dw.com/" rel="noopener">德国之声（DW）学习站</a> 的慢速新闻当补充。</p>
+      <p><span data-i18n="methods.hoeren.p2a">材料：</span><strong data-i18n="methods.hoeren.p2s">课本配套音频</strong><span data-i18n="methods.hoeren.p2b">打底（最贴近考试语速）；有余力再拿 </span><a href="https://learngerman.dw.com/" rel="noopener" data-i18n="methods.hoeren.p2link">德国之声（DW）学习站</a><span data-i18n="methods.hoeren.p2c"> 的慢速新闻当补充。</span></p>
     </article>
 
     <article aria-labelledby="grammatik">
-      <h2 id="grammatik">三、语法：A2 升 B1 必补的 8 个点</h2>
-      <p>下面这 8 个点，是我做题时反复出错的地方。每周只攻一个，别贪。</p>
+      <h2 id="grammatik" data-i18n="methods.gram.h2">三、语法：A2 升 B1 必补的 8 个点</h2>
+      <p data-i18n="methods.gram.p">下面这 8 个点，是我做题时反复出错的地方。每周只攻一个，别贪。</p>
       <table>
-        <caption>A2 → B1 关键语法清单</caption>
+        <caption data-i18n="methods.gram.caption">A2 → B1 关键语法清单</caption>
         <thead>
-          <tr><th scope="col">语法点</th><th scope="col">德语例句</th><th scope="col">中文说明</th></tr>
+          <tr>
+            <th scope="col" data-i18n="methods.gram.th1">语法点</th>
+            <th scope="col" data-i18n="methods.gram.th2">德语例句</th>
+            <th scope="col" data-i18n="methods.gram.th3">中文说明</th>
+          </tr>
         </thead>
         <tbody>
-          <tr><td>过去时（Perfekt / Präteritum）</td><td>Ich habe gestern einen Film gesehen.</td><td>日常口语用 Perfekt，书面叙事用 Präteritum</td></tr>
-          <tr><td>虚拟式（Konjunktiv II）</td><td>Wenn ich Zeit hätte, würde ich mehr lesen.</td><td>表达假设和礼貌请求：Könnten Sie das wiederholen?</td></tr>
-          <tr><td>形容词词尾变化</td><td>ein wichtiges Familienfest</td><td>靠表格记不住，只能靠背整句</td></tr>
-          <tr><td>关系从句（Relativsatz）</td><td>Das ist der Kurs, den ich besuche.</td><td>从句动词跑到句末</td></tr>
-          <tr><td>被动语态（Passiv）</td><td>Die Hausaufgabe wird morgen korrigiert.</td><td>werden + 过去分词，科技文章里到处是</td></tr>
-          <tr><td>从句连词</td><td>Ich lerne Deutsch, weil ich in Deutschland studieren will.</td><td>weil / obwohl / dass / wenn 后面动词到句末</td></tr>
-          <tr><td>可分动词</td><td>Ich fange um acht an.</td><td>前缀（an-）跑到句末，A2 最常错</td></tr>
-          <tr><td>介词搭配</td><td>Ich warte auf den Bus. / Ich interessiere mich für Musik.</td><td>动词 + 固定介词要当成一个整体背</td></tr>
+          <tr><td data-i18n="methods.gram.r1">过去时（Perfekt / Präteritum）</td><td lang="de">Ich habe gestern einen Film gesehen.</td><td data-i18n="methods.gram.r1.d">日常口语用 Perfekt，书面叙事用 Präteritum</td></tr>
+          <tr><td data-i18n="methods.gram.r2">虚拟式（Konjunktiv II）</td><td lang="de">Wenn ich Zeit hätte, würde ich mehr lesen.</td><td data-i18n="methods.gram.r2.d">表达假设和礼貌请求：Könnten Sie das wiederholen?</td></tr>
+          <tr><td data-i18n="methods.gram.r3">形容词词尾变化</td><td lang="de">ein wichtiges Familienfest</td><td data-i18n="methods.gram.r3.d">靠表格记不住，只能靠背整句</td></tr>
+          <tr><td data-i18n="methods.gram.r4">关系从句（Relativsatz）</td><td lang="de">Das ist der Kurs, den ich besuche.</td><td data-i18n="methods.gram.r4.d">从句动词跑到句末</td></tr>
+          <tr><td data-i18n="methods.gram.r5">被动语态（Passiv）</td><td lang="de">Die Hausaufgabe wird morgen korrigiert.</td><td data-i18n="methods.gram.r5.d">werden + 过去分词，科技文章里到处是</td></tr>
+          <tr><td data-i18n="methods.gram.r6">从句连词</td><td lang="de">Ich lerne Deutsch, weil ich in Deutschland studieren will.</td><td data-i18n="methods.gram.r6.d">weil / obwohl / dass / wenn 后面动词到句末</td></tr>
+          <tr><td data-i18n="methods.gram.r7">可分动词</td><td lang="de">Ich fange um acht an.</td><td data-i18n="methods.gram.r7.d">前缀（an-）跑到句末，A2 最常错</td></tr>
+          <tr><td data-i18n="methods.gram.r8">介词搭配</td><td lang="de">Ich warte auf den Bus. / Ich interessiere mich für Musik.</td><td data-i18n="methods.gram.r8.d">动词 + 固定介词要当成一个整体背</td></tr>
         </tbody>
       </table>
     </article>
 
     <article aria-labelledby="schreiben">
-      <h2 id="schreiben">四、写作和口语：先套骨架，再换内容</h2>
-      <p>B1 写作考的不是文采，是"能不能把话说完整、说清楚"。所以我把常见场景的句子骨架背下来，考场上只换内容：</p>
+      <h2 id="schreiben" data-i18n="methods.schreiben.h2">四、写作和口语：先套骨架，再换内容</h2>
+      <p data-i18n="methods.schreiben.p1">B1 写作考的不是文采，是「能不能把话说完整、说清楚」。所以我把常见场景的句子骨架背下来，考场上只换内容：</p>
       <ul>
-        <li>开头感谢：<em>vielen Dank für deine E-Mail / die Einladung!</em></li>
-        <li>表达感受：<em>Ich freue mich sehr darüber.</em></li>
-        <li>介绍习俗：<em>Bei uns ist … ein wichtiges Familienfest.</em></li>
-        <li>礼貌建议：<em>Wir könnten uns in … treffen. / Wie wäre es mit …?</em></li>
-        <li>结尾：<em>Viele Grüße / Bis bald!</em></li>
+        <li><span data-i18n="methods.schreiben.li1">开头感谢：</span><span lang="de">vielen Dank für deine E-Mail / die Einladung!</span></li>
+        <li><span data-i18n="methods.schreiben.li2">表达感受：</span><span lang="de">Ich freue mich sehr darüber.</span></li>
+        <li><span data-i18n="methods.schreiben.li3">介绍习俗：</span><span lang="de">Bei uns ist … ein wichtiges Familienfest.</span></li>
+        <li><span data-i18n="methods.schreiben.li4">礼貌建议：</span><span lang="de">Wir könnten uns in … treffen. / Wie wäre es mit …?</span></li>
+        <li><span data-i18n="methods.schreiben.li5">结尾：</span><span lang="de">Viele Grüße / Bis bald!</span></li>
       </ul>
-      <p>口语就用最笨的办法：录音复述。把自己的声音录下来回听，你会立刻听到那些"读的时候以为对了"的错误。</p>
+      <p data-i18n="methods.schreiben.p2">口语就用最笨的办法：录音复述。把自己的声音录下来回听，你会立刻听到那些「读的时候以为对了」的错误。</p>
     </article>
 
     <section aria-labelledby="fallen">
-      <h2 id="fallen">我踩过的坑</h2>
+      <h2 id="fallen" data-i18n="methods.fallen.h2">我踩过的坑</h2>
       <ul>
-        <li><strong>只背单词表</strong>：一个月后背回原地，因为词从来没有进过句子</li>
-        <li><strong>挑材料挑半天</strong>：DW、YouTube、App 都收藏了，然后一条没打开。后来定死"只用一个"才动起来</li>
-        <li><strong>追求"听懂每个词"</strong>：其实 B1 听力允许听不懂几个词，抓结构比抓词重要</li>
-        <li><strong>语法只做题不用</strong>：被动语态做了 50 道题，写作里一个都不敢用 —— 后来改成"每周写作必须用上新学的语法点"，才真的记住</li>
+        <li><strong data-i18n="methods.fallen.li1.s">只背单词表</strong><span data-i18n="methods.fallen.li1.r">：一个月后背回原地，因为词从来没有进过句子</span></li>
+        <li><strong data-i18n="methods.fallen.li2.s">挑材料挑半天</strong><span data-i18n="methods.fallen.li2.r">：DW、YouTube、App 都收藏了，然后一条没打开。后来定死「只用一个」才动起来</span></li>
+        <li><strong data-i18n="methods.fallen.li3.s">追求「听懂每个词」</strong><span data-i18n="methods.fallen.li3.r">：其实 B1 听力允许听不懂几个词，抓结构比抓词重要</span></li>
+        <li><strong data-i18n="methods.fallen.li4.s">语法只做题不用</strong><span data-i18n="methods.fallen.li4.r">：被动语态做了 50 道题，写作里一个都不敢用 —— 后来改成「每周写作必须用上新学的语法点」，才真的记住</span></li>
       </ul>
     </section>
   </main>
 
   <footer>
-    <p>© 2026 揣卓扬 · 本站是 Web Development 课程项目，内容与代码均由本人编写。</p>
+    <p data-i18n="footer.text">© 2026 揣卓扬 · 本站是 Web Development 课程项目，内容与代码均由本人编写。</p>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/i18n.js"></script>
 </body>
 </html>

@@ -3,70 +3,78 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>词汇表｜德语 A2→B1 自学站</title>
+  <title data-i18n="page.vocab.title">词汇表｜德语 A2→B1 自学站</title>
   <meta name="description" content="A2 到 B1 的高频德语词表：名词、动词、形容词、连接词，可搜索、可按词类筛选，每个词配例句。">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <header>
-    <p class="site-title"><a href="index.html">德语 A2 → B1 自学站</a></p>
-    <nav aria-label="主导航">
+    <div class="header-top">
+      <p class="site-title"><a href="index.html" data-i18n="site.title">德语 A2 → B1 自学站</a></p>
+      <button type="button" class="lang-toggle" id="lang-toggle"
+              data-i18n="lang.button" data-i18n-aria-label="lang.aria">EN</button>
+    </div>
+    <nav aria-label="主导航" data-i18n-aria-label="nav.main">
       <ul>
-        <li><a href="index.html">首页</a></li>
-        <li><a href="lernen.html">学习方法</a></li>
-        <li><a href="vokabeln.html" aria-current="page">词汇表</a></li>
-        <li><a href="kontakt.html">联系</a></li>
+        <li><a href="index.html" data-i18n="nav.home">首页</a></li>
+        <li><a href="lernen.html" data-i18n="nav.methods">学习方法</a></li>
+        <li><a href="vokabeln.html" aria-current="page" data-i18n="nav.vocab">词汇表</a></li>
+        <li><a href="kontakt.html" data-i18n="nav.contact">联系</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <h1>词汇表：A2 到 B1 的高频词</h1>
-    <p>这里的词不是我抄来的词表，是我在课本和作文里反复用错、用不出来的那些。每个词都配一句完整的例句 —— 孤立背词记不住，放在句子里才有用。</p>
+    <h1 data-i18n="vocab.h1">词汇表：A2 到 B1 的高频词</h1>
+    <p data-i18n="vocab.lead">这里的词不是我抄来的词表，是我在课本和作文里反复用错、用不出来的那些。每个词都配一句完整的例句 —— 孤立背词记不住，放在句子里才有用。</p>
 
     <section aria-labelledby="suche-h">
-      <h2 id="suche-h">找词</h2>
+      <h2 id="suche-h" data-i18n="vocab.search.h2">找词</h2>
       <form class="filter" role="search">
         <p class="field">
-          <label for="suche">搜索德语、中文或例句</label>
-          <input type="search" id="suche" name="suche" autocomplete="off" placeholder="例如：Entscheidung / 决定 / Prüfung">
+          <label for="suche" data-i18n="vocab.search.label">搜索德语、中文或例句</label>
+          <input type="search" id="suche" name="suche" autocomplete="off"
+                 data-i18n-placeholder="vocab.search.placeholder"
+                 placeholder="例如：Entscheidung / 决定 / Prüfung">
         </p>
-        <div class="filter-buttons" role="group" aria-label="按词类筛选">
-          <button type="button" data-filter="alle" aria-pressed="true">全部</button>
-          <button type="button" data-filter="nomen" aria-pressed="false">名词</button>
-          <button type="button" data-filter="verben" aria-pressed="false">动词</button>
-          <button type="button" data-filter="adjektive" aria-pressed="false">形容词</button>
-          <button type="button" data-filter="sonstiges" aria-pressed="false">连接词 / 其他</button>
+        <div class="filter-buttons" role="group" aria-label="按词类筛选"
+             data-i18n-aria-label="vocab.group.aria">
+          <button type="button" data-filter="alle" aria-pressed="true" data-i18n="vocab.filter.all">全部</button>
+          <button type="button" data-filter="nomen" aria-pressed="false" data-i18n="vocab.filter.nomen">名词</button>
+          <button type="button" data-filter="verben" aria-pressed="false" data-i18n="vocab.filter.verben">动词</button>
+          <button type="button" data-filter="adjektive" aria-pressed="false" data-i18n="vocab.filter.adjektive">形容词</button>
+          <button type="button" data-filter="sonstiges" aria-pressed="false" data-i18n="vocab.filter.sonstiges">连接词 / 其他</button>
         </div>
         <p class="hint" id="anzahl" aria-live="polite">正在载入词表…</p>
       </form>
     </section>
 
     <section aria-labelledby="liste-h">
-      <h2 id="liste-h">词表</h2>
+      <h2 id="liste-h" data-i18n="vocab.list.h2">词表</h2>
       <table class="vokabeln">
-        <caption>词表：德语词条、词类、中文释义与例句</caption>
+        <caption data-i18n="vocab.table.caption">词表：德语词条、词类、中文释义与例句</caption>
         <thead>
           <tr>
-            <th scope="col">德语</th>
-            <th scope="col">词类</th>
-            <th scope="col">中文</th>
-            <th scope="col">例句</th>
+            <th scope="col" data-i18n="vocab.th.german">德语</th>
+            <th scope="col" data-i18n="vocab.th.pos">词类</th>
+            <th scope="col" data-i18n="vocab.th.meaning">中文</th>
+            <th scope="col" data-i18n="vocab.th.example">例句</th>
           </tr>
         </thead>
         <tbody id="vokabel-tbody"></tbody>
       </table>
       <noscript>
-        <p>词表需要 JavaScript 才能显示和筛选。请在浏览器里启用 JavaScript，或直接看 <a href="lernen.html">学习方法</a> 页。</p>
+        <p data-i18n="vocab.noscript">词表需要 JavaScript 才能显示和筛选，请在浏览器里启用 JavaScript。</p>
       </noscript>
     </section>
   </main>
 
   <footer>
-    <p>© 2026 揣卓扬 · 本站是 Web Development 课程项目，内容与代码均由本人编写。</p>
+    <p data-i18n="footer.text">© 2026 揣卓扬 · 本站是 Web Development 课程项目，内容与代码均由本人编写。</p>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script src="js/vokabeln.js"></script>
 </body>
 </html>

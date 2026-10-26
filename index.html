@@ -3,81 +3,85 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>德语 A2→B1 自学站｜一个中国学生的进阶记录</title>
+  <title data-i18n="page.index.title">德语 A2→B1 自学站｜一个中国学生的进阶记录</title>
   <meta name="description" content="从德语 A2 到 B1 的自学记录：每周怎么学、用什么材料、哪些语法必须补。">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <header>
-    <p class="site-title"><a href="index.html">德语 A2 → B1 自学站</a></p>
-    <nav aria-label="主导航">
+    <div class="header-top">
+      <p class="site-title"><a href="index.html" data-i18n="site.title">德语 A2 → B1 自学站</a></p>
+      <button type="button" class="lang-toggle" id="lang-toggle"
+              data-i18n="lang.button" data-i18n-aria-label="lang.aria">EN</button>
+    </div>
+    <nav aria-label="主导航" data-i18n-aria-label="nav.main">
       <ul>
-        <li><a href="index.html" aria-current="page">首页</a></li>
-        <li><a href="lernen.html">学习方法</a></li>
-        <li><a href="vokabeln.html">词汇表</a></li>
-        <li><a href="kontakt.html">联系</a></li>
+        <li><a href="index.html" aria-current="page" data-i18n="nav.home">首页</a></li>
+        <li><a href="lernen.html" data-i18n="nav.methods">学习方法</a></li>
+        <li><a href="vokabeln.html" data-i18n="nav.vocab">词汇表</a></li>
+        <li><a href="kontakt.html" data-i18n="nav.contact">联系</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <h1>从 A2 走到 B1，我把这条路记下来</h1>
-    <p>课堂能给你语法表，但不会给你每周的时间表。缺的从来不是教材，是「每天具体做什么」。</p>
+    <h1 data-i18n="index.h1">从 A2 走到 B1，我把这条路记下来</h1>
+    <p data-i18n="index.lead">课堂能给你语法表，但不会给你每周的时间表。缺的从来不是教材，是「每天具体做什么」。</p>
 
     <section aria-labelledby="warum">
-      <h2 id="warum">为什么有这个站</h2>
-      <p>我是海南比勒费尔德应用科学大学计算机科学专业的学生，德语是我的副专业。课上到 A2 之后，我发现真正卡住我的不是某个语法点，而是三件事：<strong>课本之外要不要加东西、每天一小时怎么分配、学了不知道有没有进步</strong>。</p>
-      <p>所以我一边走一边把方法记在这里。它首先是给我自己用的行动清单，其次才是给处境相似的人（中文母语、课业不轻、只有碎片时间）看的参考。</p>
+      <h2 id="warum" data-i18n="index.why.h2">为什么有这个站</h2>
+      <p><span data-i18n="index.why.p1a">我是海南比勒费尔德应用科学大学计算机科学专业的学生，德语是我的副专业。课上到 A2 之后，我发现真正卡住我的不是某个语法点，而是三件事：</span><strong data-i18n="index.why.p1b">课本之外要不要加东西、每天一小时怎么分配、学了不知道有没有进步</strong><span data-i18n="index.why.p1c">。</span></p>
+      <p data-i18n="index.why.p2">所以我一边走一边把方法记在这里。它首先是给我自己用的行动清单，其次才是给处境相似的人（中文母语、课业不轻、只有碎片时间）看的参考。</p>
     </section>
 
     <section aria-labelledby="stand">
-      <h2 id="stand">我的起点和现状</h2>
+      <h2 id="stand" data-i18n="index.stand.h2">我的起点和现状</h2>
       <table>
-        <caption>个人德语学习进度（2026 年秋季）</caption>
+        <caption data-i18n="index.stand.caption">个人德语学习进度（2026 年秋季）</caption>
         <tbody>
-          <tr><th scope="row">起点</th><td>A2（学校德语副专业课程）</td></tr>
-          <tr><th scope="row">现状</th><td>冲 B1：能读慢速新闻，能写 80–120 词的邮件（比如回德国朋友的中秋问候）</td></tr>
-          <tr><th scope="row">目标</th><td><strong>先通过 B1 考试拿到证书</strong>；用了它读文献、应付实习面试是之后的事</td></tr>
-          <tr><th scope="row">每周投入</th><td>每天 1 小时，一周约 7 小时 —— 固定时段，不靠「有空就学」</td></tr>
+          <tr><th scope="row" data-i18n="index.stand.start">起点</th><td data-i18n="index.stand.start.v">A2（学校德语副专业课程）</td></tr>
+          <tr><th scope="row" data-i18n="index.stand.now">现状</th><td data-i18n="index.stand.now.v">冲 B1：能读慢速新闻，能写 80–120 词的邮件（比如回德国朋友的中秋问候）</td></tr>
+          <tr><th scope="row" data-i18n="index.stand.goal">目标</th><td><strong data-i18n="index.stand.goal.s">先通过 B1 考试拿到证书</strong><span data-i18n="index.stand.goal.r">；用了它读文献、应付实习面试是之后的事</span></td></tr>
+          <tr><th scope="row" data-i18n="index.stand.time">每周投入</th><td data-i18n="index.stand.time.v">每天 1 小时，一周约 7 小时 —— 固定时段，不靠「有空就学」</td></tr>
         </tbody>
       </table>
     </section>
 
     <section aria-labelledby="inhalt">
-      <h2 id="inhalt">这个站有什么</h2>
+      <h2 id="inhalt" data-i18n="index.inhalt.h2">这个站有什么</h2>
       <ul>
-        <li><a href="lernen.html">学习方法</a> —— 词汇、听力、语法、写作口语四条线，每条给具体材料和每周安排</li>
-        <li>语法清单 —— A2 升 B1 必须补的 8 个点，写在「学习方法」页里</li>
-        <li><a href="vokabeln.html">词汇表</a> —— 31 个高频词，可按词类筛选、可搜索，每个词配一句例句</li>
-        <li><a href="kontakt.html">联系页</a> —— 表单 + 浏览器校验（本站没有后端，不会真的发邮件）</li>
+        <li><a href="lernen.html" data-i18n="nav.methods">学习方法</a><span data-i18n="index.inhalt.li1.rest"> —— 词汇、听力、语法、写作口语四条线，每条给具体材料和每周安排</span></li>
+        <li data-i18n="index.inhalt.li2">语法清单 —— A2 升 B1 必须补的 8 个点，写在「学习方法」页里</li>
+        <li><a href="vokabeln.html" data-i18n="nav.vocab">词汇表</a><span data-i18n="index.inhalt.li3.rest"> —— 31 个高频词，可按词类筛选、可搜索，每个词配一句例句</span></li>
+        <li><a href="kontakt.html" data-i18n="nav.contact">联系页</a><span data-i18n="index.inhalt.li4.rest"> —— 表单 + 浏览器校验（本站没有后端，不会真的发邮件）</span></li>
       </ul>
     </section>
 
     <section aria-labelledby="woche">
-      <h2 id="woche">我现在每周怎么过</h2>
+      <h2 id="woche" data-i18n="index.woche.h2">我现在每周怎么过</h2>
       <table>
-        <caption>一周德语学习时间表（每天 1 小时）</caption>
+        <caption data-i18n="index.woche.caption">一周德语学习时间表（每天 1 小时）</caption>
         <thead>
-          <tr><th scope="col">星期</th><th scope="col">做什么</th><th scope="col">时长</th></tr>
+          <tr><th scope="col" data-i18n="index.woche.th1">星期</th><th scope="col" data-i18n="index.woche.th2">做什么</th><th scope="col" data-i18n="index.woche.th3">时长</th></tr>
         </thead>
         <tbody>
-          <tr><td>周一</td><td>词汇：20 个新词，卡在句子里记（不背孤立单词表）</td><td>60 分钟</td></tr>
-          <tr><td>周二</td><td>听力：课本音频精听一段（听 → 写 → 对原文 → 跟读）</td><td>60 分钟</td></tr>
-          <tr><td>周三</td><td>语法：只攻一个点，做练习册对应题目</td><td>60 分钟</td></tr>
-          <tr><td>周四</td><td>写作：课本单元主题，写 100 词短文</td><td>60 分钟</td></tr>
-          <tr><td>周五</td><td>口语：录音复述周二听的内容，回听自己的错误</td><td>60 分钟</td></tr>
-          <tr><td>周六</td><td>补薄弱环节：哪条线掉队就补哪条</td><td>60 分钟</td></tr>
-          <tr><td>周日</td><td>整理错题本 + 复盘本周，定下周攻哪个语法点</td><td>60 分钟</td></tr>
+          <tr><td data-i18n="index.woche.mon">周一</td><td data-i18n="index.woche.mon.task">词汇：20 个新词，卡在句子里记（不背孤立单词表）</td><td data-i18n="index.woche.min">60 分钟</td></tr>
+          <tr><td data-i18n="index.woche.tue">周二</td><td data-i18n="index.woche.tue.task">听力：课本音频精听一段（听 → 写 → 对原文 → 跟读）</td><td data-i18n="index.woche.min">60 分钟</td></tr>
+          <tr><td data-i18n="index.woche.wed">周三</td><td data-i18n="index.woche.wed.task">语法：只攻一个点，做练习册对应题目</td><td data-i18n="index.woche.min">60 分钟</td></tr>
+          <tr><td data-i18n="index.woche.thu">周四</td><td data-i18n="index.woche.thu.task">写作：课本单元主题，写 100 词短文</td><td data-i18n="index.woche.min">60 分钟</td></tr>
+          <tr><td data-i18n="index.woche.fri">周五</td><td data-i18n="index.woche.fri.task">口语：录音复述周二听的内容，回听自己的错误</td><td data-i18n="index.woche.min">60 分钟</td></tr>
+          <tr><td data-i18n="index.woche.sat">周六</td><td data-i18n="index.woche.sat.task">补薄弱环节：哪条线掉队就补哪条</td><td data-i18n="index.woche.min">60 分钟</td></tr>
+          <tr><td data-i18n="index.woche.sun">周日</td><td data-i18n="index.woche.sun.task">整理错题本 + 复盘本周，定下周攻哪个语法点</td><td data-i18n="index.woche.min">60 分钟</td></tr>
         </tbody>
       </table>
     </section>
   </main>
 
   <footer>
-    <p>© 2026 揣卓扬 · 本站是 Web Development 课程项目，内容与代码均由本人编写。</p>
+    <p data-i18n="footer.text">© 2026 揣卓扬 · 本站是 Web Development 课程项目，内容与代码均由本人编写。</p>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/i18n.js"></script>
 </body>
 </html>
