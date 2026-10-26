@@ -6,6 +6,9 @@ const anzahl = document.querySelector("#anzahl");
 const catButtons = document.querySelectorAll("[data-filter]");    // 词类
 const themaButtons = document.querySelectorAll("[data-thema]");   // 主题
 
+// 三个数据文件（必须在加载本文件之前引入）：主词表 + B1 高频词两批
+const ALLE = VOKABELN.concat(VOKABELN_B1, VOKABELN_B1_2);
+
 let aktiveKategorie = "alle";
 let aktivesThema = "alle";
 
@@ -28,7 +31,7 @@ function render() {
   const english = lang() === "en";
   const q = suche.value.trim().toLowerCase();
 
-  const treffer = VOKABELN.filter(function (wort) {
+  const treffer = ALLE.filter(function (wort) {
     const passtKategorie = aktiveKategorie === "alle" || wort.cat === aktiveKategorie;
     const passtThema = aktivesThema === "alle" || wort.thema === aktivesThema;
     // 两种语言的释义都参与搜索，切到英文也能用中文关键词找词
@@ -71,8 +74,8 @@ function render() {
     anzahl.textContent = english ? "no matches — try another keyword" : "没有匹配的词条 —— 试试别的关键词";
   } else {
     anzahl.textContent = english
-      ? treffer.length + " of " + VOKABELN.length + " entries"
-      : treffer.length + " / 共 " + VOKABELN.length + " 个词条";
+      ? treffer.length + " of " + ALLE.length + " entries"
+      : treffer.length + " / 共 " + ALLE.length + " 个词条";
   }
 }
 

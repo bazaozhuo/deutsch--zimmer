@@ -180,6 +180,7 @@
       "vocab.filter.topic": "By topic",
       "vocab.group.thema": "Filter by topic",
       "vocab.thema.all": "All topics",
+      "vocab.thema.b1": "B1 high-frequency",
       "vocab.thema.alltag": "Everyday & study",
       "vocab.thema.business": "Business & ideas",
       "vocab.thema.wetter": "Weather",
