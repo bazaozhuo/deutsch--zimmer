@@ -275,3 +275,85 @@ footer p { margin: 0; }
   outline: 3px solid rgba(184, 20, 30, 0.3);
   outline-offset: 2px;
 }
+
+/* ===========================================================
+   W3：图片 + 响应式 + 布局
+   =========================================================== */
+
+/* ---------- 图片 ---------- */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.hero { margin: 1.4rem 0 2rem; }
+.hero img {
+  display: block;
+  width: 100%;
+  max-width: 620px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.hero figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--ink-soft);
+}
+
+/* ---------- 表格横向滚动容器 ----------
+   手机上表格在自己盒子里左右滑，整个页面不会跟着变宽
+   （这是修掉「手机横向溢出」的关键）*/
+.table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1rem 0 1.6rem;
+}
+.table-wrap > table {
+  margin: 0;
+  min-width: 34rem;
+}
+.table-wrap:focus-visible {
+  outline: 3px solid rgba(184, 20, 30, 0.3);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* ---------- 手机（窄屏）---------- */
+@media (max-width: 760px) {
+  header { padding: 0.9rem 1rem 0.8rem; }
+  main { padding: 1.5rem 1rem 2.5rem; }
+
+  h1 { font-size: 1.6rem; }
+  h1 + p { font-size: 1rem; }
+  h2 { font-size: 1.15rem; margin-top: 1.9rem; }
+
+  .site-title { font-size: 1.05rem; }
+  nav ul { gap: 0.1rem 1rem; }
+  nav a { font-size: 0.95rem; }
+
+  article { padding: 1rem 1rem 0.4rem; }
+
+  table { font-size: 0.875rem; }
+  th, td { padding: 0.5rem 0.5rem; }
+  thead th { white-space: normal; }
+  .table-wrap > table { min-width: 30rem; }
+
+  /* iOS 在字号小于 16px 的输入框里会自动放大整个页面 */
+  input, select, textarea { font-size: 1rem; }
+
+  .filter-buttons button { padding: 0.45rem 0.8rem; }
+
+  footer { padding: 1.2rem 1rem 1.5rem; }
+}
+
+/* ---------- 宽屏：站内导航做成两列卡片（Flex/Grid 布局）---------- */
+@media (min-width: 860px) {
+  .link-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.3rem 2rem;
+  }
+  .link-grid li {
+    margin-bottom: 0.15rem;
+  }
+}

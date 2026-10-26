@@ -29,6 +29,13 @@
     <h1 data-i18n="index.h1">从 A2 走到 B1，我把这条路记下来</h1>
     <p data-i18n="index.lead">课堂能给你语法表，但不会给你每周的时间表。缺的从来不是教材，是「每天具体做什么」。</p>
 
+    <figure class="hero">
+      <img src="images/lernpfad.svg" width="620" height="220"
+           alt="一条从 A2 弯向 B1 的路径，上面四个编号里程碑依次是：词汇、听力、语法、写作与口语"
+           data-i18n-alt="index.img.alt">
+      <figcaption data-i18n="index.img.caption">四条线同时往前走 —— 不是先学完词汇再学语法。</figcaption>
+    </figure>
+
     <section aria-labelledby="warum">
       <h2 id="warum" data-i18n="index.why.h2">为什么有这个站</h2>
       <p><span data-i18n="index.why.p1a">我是海南比勒费尔德应用科学大学计算机科学专业的学生，德语是我的副专业。课上到 A2 之后，我发现真正卡住我的不是某个语法点，而是三件事：</span><strong data-i18n="index.why.p1b">课本之外要不要加东西、每天一小时怎么分配、学了不知道有没有进步</strong><span data-i18n="index.why.p1c">。</span></p>
@@ -37,6 +44,8 @@
 
     <section aria-labelledby="stand">
       <h2 id="stand" data-i18n="index.stand.h2">我的起点和现状</h2>
+      <div class="table-wrap" role="region" aria-label="个人德语学习进度表"
+           data-i18n-aria-label="index.stand.table.aria" tabindex="0">
       <table>
         <caption data-i18n="index.stand.caption">个人德语学习进度（2026 年秋季）</caption>
         <tbody>
@@ -46,11 +55,12 @@
           <tr><th scope="row" data-i18n="index.stand.time">每周投入</th><td data-i18n="index.stand.time.v">每天 1 小时，一周约 7 小时 —— 固定时段，不靠「有空就学」</td></tr>
         </tbody>
       </table>
+      </div>
     </section>
 
     <section aria-labelledby="inhalt">
       <h2 id="inhalt" data-i18n="index.inhalt.h2">这个站有什么</h2>
-      <ul>
+      <ul class="link-grid">
         <li><a href="lernen.html" data-i18n="nav.methods">学习方法</a><span data-i18n="index.inhalt.li1.rest"> —— 词汇、听力、语法、写作口语四条线，每条给具体材料和每周安排</span></li>
         <li data-i18n="index.inhalt.li2">语法清单 —— A2 升 B1 必须补的 8 个点，写在「学习方法」页里</li>
         <li><a href="vokabeln.html" data-i18n="nav.vocab">词汇表</a><span data-i18n="index.inhalt.li3.rest"> —— 31 个高频词，可按词类筛选、可搜索，每个词配一句例句</span></li>
@@ -60,6 +70,8 @@
 
     <section aria-labelledby="woche">
       <h2 id="woche" data-i18n="index.woche.h2">我现在每周怎么过</h2>
+      <div class="table-wrap" role="region" aria-label="一周德语学习时间表"
+           data-i18n-aria-label="index.woche.table.aria" tabindex="0">
       <table>
         <caption data-i18n="index.woche.caption">一周德语学习时间表（每天 1 小时）</caption>
         <thead>
@@ -75,6 +87,7 @@
           <tr><td data-i18n="index.woche.sun">周日</td><td data-i18n="index.woche.sun.task">整理错题本 + 复盘本周，定下周攻哪个语法点</td><td data-i18n="index.woche.min">60 分钟</td></tr>
         </tbody>
       </table>
+      </div>
     </section>
   </main>
 

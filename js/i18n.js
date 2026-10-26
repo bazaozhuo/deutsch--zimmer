@@ -42,6 +42,10 @@
       "index.why.p1b": "whether to add anything beyond the textbook, how to split one hour a day, and how to tell whether I was improving",
       "index.why.p1c": ".",
       "index.why.p2": "So I write the method down as I go. It is first an action list for myself, and only second a reference for people in a similar position: native Chinese speakers, busy with coursework, with only fragments of time.",
+      "index.img.alt": "A curved path from A2 to B1 with four numbered milestones: vocabulary, listening, grammar, writing and speaking",
+      "index.img.caption": "Four tracks move forward at the same time — you do not finish vocabulary before starting grammar.",
+      "index.stand.table.aria": "Personal German learning progress",
+      "index.woche.table.aria": "Weekly German study timetable",
       "index.stand.h2": "Where I started and where I am",
       "index.stand.caption": "Personal German learning progress (autumn 2026)",
       "index.stand.start": "Starting point",
@@ -119,6 +123,7 @@
       "methods.gram.h2": "3. Grammar: the 8 points to fill in from A2 to B1",
       "methods.gram.p": "These eight are where I kept making mistakes. Attack one per week — don't be greedy.",
       "methods.gram.caption": "A2 → B1 key grammar list",
+      "methods.gram.table.aria": "A2 to B1 key grammar list",
       "methods.gram.th1": "Grammar point",
       "methods.gram.th2": "German example",
       "methods.gram.th3": "What it means",
@@ -172,6 +177,7 @@
       "vocab.filter.sonstiges": "Conjunctions / other",
       "vocab.list.h2": "Word list",
       "vocab.table.caption": "Word list: German entry, word class, meaning and example sentence",
+      "vocab.table.aria": "Word list, scrolls horizontally on narrow screens",
       "vocab.th.german": "German",
       "vocab.th.pos": "Word class",
       "vocab.th.meaning": "Meaning",
@@ -240,6 +246,13 @@
         attrOriginals.set(el, store);
       }
     });
+    document.querySelectorAll("[data-i18n-alt]").forEach(function (el) {
+      var store = attrOriginals.get(el) || {};
+      if (store.alt === undefined) {
+        store.alt = el.getAttribute("alt") || "";
+        attrOriginals.set(el, store);
+      }
+    });
   }
 
   function applyText(lang) {
@@ -265,6 +278,13 @@
       var translated = TRANSLATIONS[lang] && TRANSLATIONS[lang][key];
       var store = attrOriginals.get(el) || {};
       el.setAttribute("aria-label", translated !== undefined && lang !== DEFAULT_LANG ? translated : (store.ariaLabel || ""));
+    });
+
+    document.querySelectorAll("[data-i18n-alt]").forEach(function (el) {
+      var key = el.getAttribute("data-i18n-alt");
+      var translated = TRANSLATIONS[lang] && TRANSLATIONS[lang][key];
+      var store = attrOriginals.get(el) || {};
+      el.setAttribute("alt", translated !== undefined && lang !== DEFAULT_LANG ? translated : (store.alt || ""));
     });
   }
 
