@@ -357,3 +357,27 @@ img {
     margin-bottom: 0.15rem;
   }
 }
+
+/* 筛选分组的小标题（W3 扩展：词类 / 主题两行筛选） */
+.filter-label {
+  margin: 0.8rem 0 0.1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+}
+
+/* 引用块（听写原文） */
+blockquote {
+  margin: 1rem 0 1.5rem;
+  padding: 0.9rem 1.1rem;
+  background: var(--card);
+  border-left: 4px solid var(--accent);
+  border-radius: 6px;
+}
+blockquote p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.75;
+}

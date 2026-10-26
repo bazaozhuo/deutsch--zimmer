@@ -20,6 +20,7 @@
         <li><a href="index.html" data-i18n="nav.home">首页</a></li>
         <li><a href="lernen.html" data-i18n="nav.methods">学习方法</a></li>
         <li><a href="vokabeln.html" aria-current="page" data-i18n="nav.vocab">词汇表</a></li>
+        <li><a href="notizen.html" data-i18n="nav.notes">笔记</a></li>
         <li><a href="kontakt.html" data-i18n="nav.contact">联系</a></li>
       </ul>
     </nav>
@@ -38,6 +39,7 @@
                  data-i18n-placeholder="vocab.search.placeholder"
                  placeholder="例如：Entscheidung / 决定 / Prüfung">
         </p>
+        <p class="filter-label" data-i18n="vocab.filter.class">按词类</p>
         <div class="filter-buttons" role="group" aria-label="按词类筛选"
              data-i18n-aria-label="vocab.group.aria">
           <button type="button" data-filter="alle" aria-pressed="true" data-i18n="vocab.filter.all">全部</button>
@@ -45,6 +47,16 @@
           <button type="button" data-filter="verben" aria-pressed="false" data-i18n="vocab.filter.verben">动词</button>
           <button type="button" data-filter="adjektive" aria-pressed="false" data-i18n="vocab.filter.adjektive">形容词</button>
           <button type="button" data-filter="sonstiges" aria-pressed="false" data-i18n="vocab.filter.sonstiges">连接词 / 其他</button>
+        </div>
+        <p class="filter-label" data-i18n="vocab.filter.topic">按主题</p>
+        <div class="filter-buttons" role="group" aria-label="按主题筛选"
+             data-i18n-aria-label="vocab.group.thema">
+          <button type="button" data-thema="alle" aria-pressed="true" data-i18n="vocab.thema.all">全部主题</button>
+          <button type="button" data-thema="alltag" aria-pressed="false" data-i18n="vocab.thema.alltag">日常与学习</button>
+          <button type="button" data-thema="business" aria-pressed="false" data-i18n="vocab.thema.business">商业与创意</button>
+          <button type="button" data-thema="wetter" aria-pressed="false" data-i18n="vocab.thema.wetter">天气</button>
+          <button type="button" data-thema="stadt" aria-pressed="false" data-i18n="vocab.thema.stadt">城市与生活</button>
+          <button type="button" data-thema="zukunft" aria-pressed="false" data-i18n="vocab.thema.zukunft">未来与计划</button>
         </div>
         <p class="hint" id="anzahl" aria-live="polite">正在载入词表…</p>
       </form>
@@ -78,6 +90,7 @@
   </footer>
 
   <script src="js/i18n.js"></script>
+  <script src="js/vokabeln-data.js"></script>
   <script src="js/vokabeln.js"></script>
 </body>
 </html>
