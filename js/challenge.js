@@ -17,7 +17,7 @@
 (function () {
   'use strict';
 
-  var ALL = VOKABELN.concat(VOKABELN_B1, VOKABELN_B1_2);
+  var ALL = VOKABELN.concat(VOKABELN_B1, VOKABELN_B1_2, VOKABELN_B1_3, VOKABELN_B1_4, VOKABELN_B1_5, VOKABELN_B1_6, VOKABELN_B1_7);
   var K_BEST = 'dz_best';
 
   /* 反馈用的小词典：跟着 <html lang> 走（i18n.js 会改它） */

@@ -14,7 +14,7 @@
 (function () {
   'use strict';
 
-  var ALL = VOKABELN.concat(VOKABELN_B1, VOKABELN_B1_2);
+  var ALL = VOKABELN.concat(VOKABELN_B1, VOKABELN_B1_2, VOKABELN_B1_3, VOKABELN_B1_4, VOKABELN_B1_5, VOKABELN_B1_6, VOKABELN_B1_7);
 
   var K_MASTER = 'dz_mastered';   // 已学会的词（数组，存德语原形）
   var K_USER   = 'dz_user';       // 昵称

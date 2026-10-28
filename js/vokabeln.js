@@ -7,7 +7,7 @@ const catButtons = document.querySelectorAll("[data-filter]");    // 词类
 const themaButtons = document.querySelectorAll("[data-thema]");   // 主题
 
 // 三个数据文件（必须在加载本文件之前引入）：主词表 + B1 高频词两批
-const ALLE = VOKABELN.concat(VOKABELN_B1, VOKABELN_B1_2);
+const ALLE = VOKABELN.concat(VOKABELN_B1, VOKABELN_B1_2, VOKABELN_B1_3, VOKABELN_B1_4, VOKABELN_B1_5, VOKABELN_B1_6, VOKABELN_B1_7);
 
 let aktiveKategorie = "alle";
 let aktivesThema = "alle";
@@ -64,7 +64,7 @@ function render() {
     const tdBeispiel = document.createElement("td");
     tdBeispiel.className = "beispiel";
     tdBeispiel.lang = "de";
-    tdBeispiel.textContent = wort.ex;
+    tdBeispiel.textContent = wort.ex || "—";   // 新导入的 B1 词暂无例句
     tr.appendChild(tdBeispiel);
 
     tbody.appendChild(tr);

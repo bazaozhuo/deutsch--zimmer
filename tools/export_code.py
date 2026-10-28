@@ -42,8 +42,9 @@ GROUPS: list[tuple[str, str, str, list[str]]] = [
     ("02-CSS", "CSS", "css", ["css/style.css"]),
     ("03-JavaScript", "JavaScript", "javascript", [
         "js/i18n.js", "js/vokabeln-data.js", "js/vokabeln-data-b1.js",
-        "js/vokabeln-data-b1-2.js", "js/vokabeln.js", "js/home.js",
-        "js/challenge.js", "js/wissen.js", "js/kontakt.js",
+        "js/vokabeln-data-b1-2.js", "js/vokabeln-data-b1-3.js", "js/vokabeln-data-b1-4.js",
+        "js/vokabeln-data-b1-5.js", "js/vokabeln-data-b1-6.js", "js/vokabeln-data-b1-7.js",
+        "js/vokabeln.js", "js/home.js", "js/challenge.js", "js/wissen.js", "js/kontakt.js",
     ]),
 ]
 
@@ -60,6 +61,11 @@ ROLE = {
     "js/vokabeln-data.js": "词表数据第 1 份：我课本笔记里的 107 个词",
     "js/vokabeln-data-b1.js": "词表数据第 2 份：B1 高频词 50 个",
     "js/vokabeln-data-b1-2.js": "词表数据第 3 份：B1 高频词 46 个",
+    "js/vokabeln-data-b1-3.js": "词表数据第 4 份：Netzwerk B1 词汇表抽样 100 个",
+    "js/vokabeln-data-b1-4.js": "词表数据第 5 份：Netzwerk B1 词汇表抽样 100 个",
+    "js/vokabeln-data-b1-5.js": "词表数据第 6 份：Netzwerk B1 词汇表抽样 100 个",
+    "js/vokabeln-data-b1-6.js": "词表数据第 7 份：Netzwerk B1 词汇表抽样 100 个",
+    "js/vokabeln-data-b1-7.js": "词表数据第 8 份：Netzwerk B1 词汇表抽样 100 个",
     "js/vokabeln.js": "词汇表逻辑：合并三份数据、搜索、双重筛选、按语言重渲染",
     "js/home.js": "首页交互：随机 5 词翻卡、进度条、投稿词、建议与一键复制、图片灯箱",
     "js/challenge.js": "单词挑战逻辑：出题（同词性干扰项）、判分、连击、错题回顾、本机最高分",
