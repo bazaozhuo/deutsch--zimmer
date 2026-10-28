@@ -64,4 +64,15 @@
   });
 
   apply();
+
+  /* 切语言后正文会被整块替换（data-i18n-html），可搜索文本要跟着重算，
+     否则英文模式下搜英文搜不到。延后一拍，等 i18n 把 innerHTML 换完。 */
+  document.addEventListener('languagechange', function () {
+    setTimeout(function () {
+      entries.forEach(function (e) {
+        e.dataset.text = e.textContent.toLowerCase().replace(/\s+/g, ' ');
+      });
+      apply();
+    }, 0);
+  });
 })();

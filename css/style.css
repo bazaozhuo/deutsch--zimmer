@@ -719,7 +719,7 @@ body.page-404 main {
 .entry .body ul, .entry .body ol { margin: 0.4rem 0 0.6rem; padding-left: 1.4rem; }
 .entry .body li { margin: 0.25rem 0; }
 .entry .body .de { font-weight: 600; }
-.entry .links { margin: 0.7rem 0 0; font-size: 0.82rem; display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.entry .links { margin: 0; padding: 0 1rem 1rem; font-size: 0.82rem; display: flex; flex-wrap: wrap; gap: 0.6rem; }
 .empty {
   background: #fffdf7; border: 1px dashed var(--line); border-radius: var(--radius);
   padding: 1.6rem 1rem; text-align: center; color: var(--ink-soft); font-size: 0.9rem;

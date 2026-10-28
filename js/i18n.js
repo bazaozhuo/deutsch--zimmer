@@ -236,13 +236,86 @@
       "challenge.btn.restart": "Restart",
       "challenge.btn.again": "Play again",
       "challenge.btn.back": "Back to questions",
-      "challenge.hint": "Keyboard works too: 1–4 to answer, Enter for the next question."
+      "challenge.hint": "Keyboard works too: 1–4 to answer, Enter for the next question.",
+
+      /* ---------- 知识索引 20 条正文（W4 补：整块 HTML 翻译） ---------- */
+      "wissen.e01.title": "Past tense: Perfekt / Präteritum",
+      "wissen.e01.sum": "Perfekt for speech, Präteritum for writing",
+      "wissen.e01.body": "<p><span class=\"de\">Perfekt</span> is what people actually say: <span class=\"de\">Ich habe gestern einen Film gesehen.</span></p><p>Written narration (news, stories) uses <span class=\"de\">Präteritum</span>: <span class=\"de\">Ich sah gestern einen Film.</span></p><p>Learn the past forms of <span class=\"de\">haben / sein</span> too: <span class=\"de\">ich war</span>, <span class=\"de\">ich hatte</span>.</p>",
+      "wissen.e01.links": "<a href=\"vokabeln.html\">Find related words in the vocabulary list</a>",
+      "wissen.e02.title": "Subjunctive: Konjunktiv II",
+      "wissen.e02.sum": "For hypotheticals and polite requests",
+      "wissen.e02.body": "<p>Hypothetical: <span class=\"de\">Wenn ich Zeit hätte, würde ich mehr lesen.</span></p><p>Polite request: <span class=\"de\">Könnten Sie das wiederholen?</span></p><p>The three you need most: <span class=\"de\">hätte / wäre / würde</span>.</p>",
+      "wissen.e02.links": "<a href=\"vokabeln.html\">Find related words in the vocabulary list</a>",
+      "wissen.e03.title": "Adjective endings",
+      "wissen.e03.sum": "Tables won't stick — memorise whole phrases",
+      "wissen.e03.body": "<p><span class=\"de\">ein wichtiges Familienfest</span> (an important family festival)</p><p>There are three sets of endings: after the definite article, after the indefinite article, and with no article. Do not memorise the grid — memorise a phrase and swap the noun.</p>",
+      "wissen.e03.links": "<a href=\"vokabeln.html\">Find related words in the vocabulary list</a>",
+      "wissen.e04.title": "Relative clauses (Relativsatz)",
+      "wissen.e04.sum": "The verb goes to the end of the clause",
+      "wissen.e04.body": "<p><span class=\"de\">Das ist der Kurs, den ich besuche.</span></p><p>The relative pronoun takes the case it has inside the clause: <span class=\"de\">den</span> (masculine, accusative). The conjugated verb sits at the end of the clause.</p>",
+      "wissen.e04.links": "<a href=\"vokabeln.html\">Find related words in the vocabulary list</a>",
+      "wissen.e05.title": "Passive (Passiv)",
+      "wissen.e05.sum": "werden + past participle — rife in technical texts",
+      "wissen.e05.body": "<p><span class=\"de\">Die Hausaufgabe wird morgen korrigiert.</span> (the homework will be marked tomorrow)</p><p>Pattern: conjugated <span class=\"de\">werden</span> + past participle at the end. With a modal it becomes <span class=\"de\">muss … korrigiert werden</span>.</p>",
+      "wissen.e05.links": "<a href=\"vokabeln.html\">Find related words in the vocabulary list</a>",
+      "wissen.e06.title": "Subordinating conjunctions weil / obwohl / dass / wenn",
+      "wissen.e06.sum": "These conjunctions push the verb to the end",
+      "wissen.e06.body": "<p><span class=\"de\">Ich lerne Deutsch, weil ich in Deutschland studieren will.</span></p><p>As soon as one of these conjunctions appears, the conjugated verb is kicked to the end (<span class=\"de\">will</span> comes last).</p>",
+      "wissen.e06.links": "<a href=\"vokabeln.html\">Find related words in the vocabulary list</a>",
+      "wissen.e07.title": "Separable verbs",
+      "wissen.e07.sum": "The prefix jumps to the end — the classic A2 mistake",
+      "wissen.e07.body": "<p><span class=\"de\">Ich fange um acht an.</span> (anfangen splits)</p><p>With prefixes like <span class=\"de\">an- / auf- / ein- / mit- / zu-</span>, the prefix moves to the end of the main clause; with a modal verb or inside a subordinate clause it stays attached: <span class=\"de\">Ich will um acht anfangen.</span></p>",
+      "wissen.e07.links": "<a href=\"vokabeln.html\">Find related words in the vocabulary list</a>",
+      "wissen.e08.title": "Prepositions that verbs demand",
+      "wissen.e08.sum": "Verb + fixed preposition: learn them as one unit",
+      "wissen.e08.body": "<p><span class=\"de\">Ich warte auf den Bus.</span> (waiting for the bus)</p><p><span class=\"de\">Ich interessiere mich für Musik.</span> (interested in music)</p><p>The preposition and the case it governs are fixed. Learning the verb alone is useless — learn verb + preposition + case together.</p>",
+      "wissen.e08.links": "<a href=\"vokabeln.html\">Find related words in the vocabulary list</a>",
+      "wissen.e09.title": "Words stick when they live in a sentence",
+      "wissen.e09.sum": "A word only counts once you have met it in context",
+      "wissen.e09.body": "<ul><li><b>How</b>: 20 words a day, each with one sentence you wrote yourself</li><li><b>Flashcards</b>: a sentence with a gap on the front, the word on the back — you have to recall it from context</li><li><b>Material</b>: the textbook word list, a flashcard app, and a dictionary app for examples</li></ul><p>The anti-pattern: copying a word list ten times. A month later you are back where you started, because the words never entered a sentence.</p>",
+      "wissen.e09.links": "<a href=\"challenge.html\">Practise in the word challenge</a>",
+      "wissen.e10.title": "Topics first, not the alphabet",
+      "wissen.e10.sum": "Start with high-frequency topic clusters, then spread out",
+      "wissen.e10.body": "<p>Start with the topics that keep coming up — study, family, festivals, work, travel — instead of grinding from A to Z.</p><p>The vocabulary here is already grouped by topic: weather, city &amp; life, future &amp; plans, business &amp; ideas, B1 high-frequency, everyday &amp; study.</p>",
+      "wissen.e10.links": "<a href=\"vokabeln.html\">Browse the vocabulary by topic</a>",
+      "wissen.e11.title": "Intensive listening in four steps",
+      "wissen.e11.sum": "A2 learners can't hear where one word ends and the next begins",
+      "wissen.e11.body": "<ol><li>Pass 1: listen only, grab the gist, no pausing</li><li>Pass 2: pause sentence by sentence and write down what you hear — even if it is incomplete</li><li>Check against the transcript and mark what you misheard (usually unstressed small words: ich / auch / nicht / schon)</li><li>Finally read along three times, copying the intonation and pauses</li></ol>",
+      "wissen.e12.title": "Choosing listening material",
+      "wissen.e12.sum": "Textbook audio first; slow news only if you have spare time",
+      "wissen.e12.body": "<p>Main source: <b>the audio that comes with your textbook</b> — closest to the exam speed.</p><p>Extra: slow news from <a href=\"https://learngerman.dw.com/\" rel=\"noopener\">Deutsche Welle (DW) Learn German</a>.</p><p>Use one. Do not run five sources at once.</p>",
+      "wissen.e13.title": "Writing: reuse a skeleton, swap the content",
+      "wissen.e13.sum": "B1 writing tests completeness and clarity, not style",
+      "wissen.e13.body": "<ul><li>Opening thanks: <span class=\"de\">vielen Dank für deine E-Mail / die Einladung!</span></li><li>Feelings: <span class=\"de\">Ich freue mich sehr darüber.</span></li><li>Describing a custom: <span class=\"de\">Bei uns ist … ein wichtiges Familienfest.</span></li><li>Polite suggestion: <span class=\"de\">Wir könnten uns in … treffen. / Wie wäre es mit …?</span></li><li>Sign-off: <span class=\"de\">Viele Grüße / Bis bald!</span></li></ul>",
+      "wissen.e14.title": "Speaking: record yourself retelling",
+      "wissen.e14.sum": "Playback exposes the mistakes you thought you had fixed",
+      "wissen.e14.body": "<p>The dumbest method that works: retell what you just listened to, record it, then play it back.</p><p>You will immediately hear the things you were sure were right — endings and prepositions above all.</p>",
+      "wissen.e15.title": "Only three kinds of material",
+      "wissen.e15.sum": "The textbook leads; extras only fill its gaps",
+      "wissen.e15.body": "<ul><li><b>Textbook</b> (the backbone): follow the course book and the class pace, do not start a parallel track</li><li><b>Support</b>: workbook, dictionary app (examples and conjugations), the textbook audio</li><li><b>What you make</b>: error log, flashcards, the essay you finish each week</li></ul><p>Rule: stop chasing new apps — the time you spend switching material is a rep you did not do.</p>",
+      "wissen.e16.title": "How to spread 60 minutes across a week",
+      "wissen.e16.sum": "One task per day, Monday to Sunday — just copy it",
+      "wissen.e16.body": "<ul><li>Mon — vocabulary: 20 new words, each inside a sentence</li><li>Tue — listening: one intensive pass: listen → write → check → read along</li><li>Wed — grammar: one single point, plus the matching workbook exercises</li><li>Thu — writing: 100 words on the current textbook unit</li><li>Fri — speaking: record yourself retelling Tuesday's audio</li><li>Sat — patch the weakest line: whatever fell behind</li><li>Sun — tidy the error log, review the week, pick next week's grammar point</li></ul>",
+      "wissen.e17.title": "Memorising word lists only",
+      "wissen.e17.sum": "A month later you are back at square one, because the words never entered a sentence",
+      "wissen.e17.body": "<p>A month later you are back at square one, because the words never entered a sentence</p>",
+      "wissen.e18.title": "Shopping for material for weeks",
+      "wissen.e18.sum": "DW, YouTube, three apps — all bookmarked, none opened. It only moved once I fixed on exactly one",
+      "wissen.e18.body": "<p>DW, YouTube, three apps — all bookmarked, none opened. It only moved once I fixed on exactly one</p>",
+      "wissen.e19.title": "Trying to catch every single word",
+      "wissen.e19.sum": "B1 listening lets you miss a few words; structure matters more than word-by-word coverage",
+      "wissen.e19.body": "<p>B1 listening lets you miss a few words; structure matters more than word-by-word coverage</p>",
+      "wissen.e20.title": "Doing grammar drills without using them",
+      "wissen.e20.sum": "Fifty passive-voice exercises, zero uses in writing. It only stuck once every weekly essay had to use the new point",
+      "wissen.e20.body": "<p>Fifty passive-voice exercises, zero uses in writing. It only stuck once every weekly essay had to use the new point</p>"
     }
   };
 
   /* 页面加载时记下的中文原文（快照） */
   var textOriginals = new Map();
   var attrOriginals = new Map();
+  var htmlOriginals = new Map();   /* data-i18n-html 用：整块 HTML 的原文快照 */
   var currentLang = DEFAULT_LANG;
 
   /* ---------- 工具 ---------- */
@@ -289,6 +362,12 @@
         attrOriginals.set(el, store);
       }
     });
+    /* 整块带标签的内容（比如条目正文）单独记 innerHTML */
+    document.querySelectorAll("[data-i18n-html]").forEach(function (el) {
+      if (!htmlOriginals.has(el)) {
+        htmlOriginals.set(el, el.innerHTML);
+      }
+    });
   }
 
   function applyText(lang) {
@@ -299,6 +378,20 @@
         el.textContent = translated;
       } else {
         el.textContent = textOriginals.get(el) || el.textContent;
+      }
+    });
+
+    /* 整块 HTML 的翻译：data-i18n-html
+       为什么不用 textContent：条目正文里有 <ul>/<li>/<span class="de">，
+       用 textContent 会把标签一起吃掉。所以这一种单独走 innerHTML。
+       切回中文时从 htmlOriginals 还原，跟文字那套逻辑一致。 */
+    document.querySelectorAll("[data-i18n-html]").forEach(function (el) {
+      var key = el.getAttribute("data-i18n-html");
+      var translated = TRANSLATIONS[lang] && TRANSLATIONS[lang][key];
+      if (lang !== DEFAULT_LANG && translated !== undefined) {
+        el.innerHTML = translated;
+      } else if (htmlOriginals.has(el)) {
+        el.innerHTML = htmlOriginals.get(el);
       }
     });
 
