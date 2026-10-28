@@ -91,6 +91,28 @@ def md_to_docx(md: str, out_path: str) -> None:
     doc = Document()
     in_code = False
     buf: list[str] = []
+    rows: list[str] = []
+
+    def flush_table() -> None:
+        """把连续的 | a | b | 行变成真 Word 表格（跳过 |---| 分隔行）"""
+        nonlocal rows
+        if not rows:
+            return
+        cells = []
+        for r in rows:
+            s = r.strip().strip("|")
+            if s and set(s) <= set("-: |"):
+                continue                      # 分隔行
+            cells.append([c.strip() for c in s.split("|")])
+        if cells:
+            width = max(len(c) for c in cells)
+            table = doc.add_table(rows=0, cols=width)
+            table.style = "Table Grid"
+            for c in cells:
+                row = table.add_row().cells
+                for i in range(width):
+                    row[i].text = c[i] if i < len(c) else ""
+        rows = []
 
     def flush_code() -> None:
         nonlocal buf
@@ -113,6 +135,10 @@ def md_to_docx(md: str, out_path: str) -> None:
         if in_code:
             buf.append(line)
             continue
+        if line.lstrip().startswith("|"):
+            rows.append(line)
+            continue
+        flush_table()
         if line.startswith("# "):
             doc.add_heading(line[2:].strip(), level=0)
         elif line.startswith("## "):
@@ -123,6 +149,7 @@ def md_to_docx(md: str, out_path: str) -> None:
             doc.add_paragraph(line.strip()[2:].strip(), style="List Bullet")
         elif line.strip():
             doc.add_paragraph(line.strip())
+    flush_table()
     flush_code()
     doc.save(out_path)
 
