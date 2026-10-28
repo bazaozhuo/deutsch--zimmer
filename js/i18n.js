@@ -43,7 +43,7 @@
 
 
       /* 词汇表页 */
-      "page.vocab.title": "Vocabulary | German A2→B1 Self-Study Site",
+      "page.vocab.title": "Vocabulary | Deutsch-Lernzimmer",
       "vocab.h1": "Vocabulary: high-frequency words from A2 to B1",
       "vocab.lead": "These are not copied from a list — they are the words I kept getting wrong or could not produce in my own writing. Each has a full example sentence: isolated words don't stick, sentences do.",
       "vocab.search.h2": "Find a word",
@@ -75,8 +75,8 @@
       "vocab.noscript": "The word list needs JavaScript to display and filter. Please enable JavaScript, or read the Methods page instead.",
 
       /* 笔记页 */
-      "page.notes.title": "My notes | German A2→B1 Self-Study Site",
-      "notes.h1": "My notes",
+      "page.notes.title": "Class notes | Deutsch-Lernzimmer",
+      "notes.h1": "Class notes",
       "notes.lead": "This page comes from my class notebook and my dictation exercise book — written by me, word by word (the originals are paper photos). I retyped it here. I don't publish textbook photos: that content belongs to the publisher.",
       "notes.diktat.h2": "Dictation: Diktat 7 “Meine Freundinnen”",
       "notes.diktat.p": "How it works: the teacher reads, I write; afterwards I compare with the original and correct in red pen. Below is the correct version I ended up with.",
@@ -99,16 +99,16 @@
       "notes.nutzung.li3": "Every Sunday: which type of mistake came back this week?",
 
       /* 404 页 */
-      "page.404.title": "Page not found (404) | German A2→B1 Self-Study Site",
+      "page.404.title": "Page not found (404) | Deutsch-Lernzimmer",
       "error.h1": "This page has wandered off",
       "error.p": "The address may be mistyped, or I have moved this page. The links below still work.",
       "error.home": "Back to the home page",
       "error.vocab": "Go to the vocabulary",
 
       /* 联系页 */
-      "page.contact.title": "Contact | German A2→B1 Self-Study Site",
-      "contact.h1": "Contact me",
-      "contact.lead": "I am building this site on my own. If you spot a typo, have a material suggestion, or you are also on the A2 to B1 road — you are welcome to write.",
+      "page.contact.title": "Contact | Deutsch-Lernzimmer",
+      "contact.h1": "Contact & feedback",
+      "contact.lead": "This site is open: spot a typo, have material to recommend, think a grammar point is missing, or are you also on the A2 to B1 road? Write to me. (No backend — the form validates locally and is not actually sent; copy the text and send it to me on WeChat or by email.)",
       "contact.form.h2": "Write a message",
       "contact.name": "Your name",
       "contact.email": "Email",
