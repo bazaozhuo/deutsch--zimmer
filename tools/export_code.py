@@ -21,6 +21,15 @@ import shutil
 import subprocess
 import sys
 
+# python-docx 是可选依赖：装了才导出 Word 版，没装就只出 Markdown
+# （系统 python3 是 PEP 668 管的，装不了包；要用 Word 版就用 venv 里的解释器跑本脚本）
+try:
+    from docx import Document
+    from docx.shared import Pt
+    HAS_DOCX = True
+except Exception:      # noqa: BLE001
+    HAS_DOCX = False
+
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEFAULT_OUT = os.path.join(os.path.dirname(REPO), "代码汇总")
 
@@ -72,6 +81,50 @@ def write(path: str, text: str) -> None:
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8", newline="\n") as f:
         f.write(text)
+
+
+def md_to_docx(md: str, out_path: str) -> None:
+    """把 Markdown 粗排成 Word：标题、代码块、列表、普通段落。
+
+    只处理本脚本自己生成的那几种行，不做通用 Markdown 解析。
+    """
+    doc = Document()
+    in_code = False
+    buf: list[str] = []
+
+    def flush_code() -> None:
+        nonlocal buf
+        if not buf:
+            return
+        p = doc.add_paragraph()
+        run = p.add_run("\n".join(buf))
+        run.font.name = "Consolas"
+        run.font.size = Pt(8.5)
+        buf = []
+
+    for line in md.splitlines():
+        if line.startswith("```"):
+            if in_code:
+                flush_code()
+                in_code = False
+            else:
+                in_code = True
+            continue
+        if in_code:
+            buf.append(line)
+            continue
+        if line.startswith("# "):
+            doc.add_heading(line[2:].strip(), level=0)
+        elif line.startswith("## "):
+            doc.add_heading(line[3:].strip(), level=1)
+        elif line.startswith("### "):
+            doc.add_heading(line[4:].strip(), level=2)
+        elif line.strip().startswith(("- ", "* ")):
+            doc.add_paragraph(line.strip()[2:].strip(), style="List Bullet")
+        elif line.strip():
+            doc.add_paragraph(line.strip())
+    flush_code()
+    doc.save(out_path)
 
 
 def git(*args: str) -> str:
@@ -203,7 +256,10 @@ def build_readme(out_dir: str) -> str:
         lines.append("")
     lines += [
         "全部代码.md      所有源码合并成一份（带目录）",
-        "全部代码.docx    同上，Word 版（可投屏/打印）",
+    ]
+    if HAS_DOCX:
+        lines.append("代码与过程.docx  同上，Word 版（可投屏/打印）")
+    lines += [
         "开发过程.md      Git 提交历史：哪天提交、改了什么、多少行",
         "```",
         "",
@@ -261,7 +317,10 @@ def main() -> None:
     write(os.path.join(out_dir, "全部代码.md"), all_md)
     write(os.path.join(out_dir, "开发过程.md"), process_md)
     # 老师要看的那一份：代码 + 过程合在一起
-    write(os.path.join(out_dir, "代码与过程.md"), all_md + "\n\n---\n\n" + process_md)
+    combined = all_md + "\n\n---\n\n" + process_md
+    write(os.path.join(out_dir, "代码与过程.md"), combined)
+    if HAS_DOCX:
+        md_to_docx(combined, os.path.join(out_dir, "代码与过程.docx"))
     write(os.path.join(out_dir, "README.md"), build_readme(out_dir))
     write(os.path.join(out_dir, "代码汇总.code-workspace"), build_workspace(out_dir))
 
@@ -269,6 +328,7 @@ def main() -> None:
     print(f"导出完成 → {out_dir}")
     print(f"  文件 {copied} 个，约 {total_lines} 行")
     print(f"  全部代码.md {line_count(all_md)} 行")
+    print(f"  代码与过程.docx {'已生成' if HAS_DOCX else '跳过（当前解释器没有 python-docx）'}")
 
 
 if __name__ == "__main__":
