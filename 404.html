@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="page.404.title">页面走丢了（404）｜德语 A2→B1 自学站</title>
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-404">
+
+  <header>
+    <div class="header-top">
+      <p class="site-title"><a href="index.html" data-i18n="site.title">Deutsch-Lernzimmer 德语自习室</a></p>
+      <button type="button" class="lang-toggle" id="lang-toggle"
+              data-i18n="lang.button" data-i18n-aria-label="lang.aria">EN</button>
+    </div>
+    <!-- 路径取舍（答辩可以讲这一点）：
+         用相对路径 → 本地双击也能正常看，常见的根目录手误网址（/abc.html）也没问题；
+         代价：如果 404 是由很深的网址触发（/my-website/a/b/c），相对路径会错位。
+         本站的 404 主要来自根目录手误，所以选了相对路径。 -->
+    <nav aria-label="主导航" data-i18n-aria-label="nav.main">
+      <ul>
+        <li><a href="index.html" data-i18n="nav.home">首页</a></li>
+        <li><a href="wissen.html" data-i18n="nav.index">知识索引</a></li>
+        <li><a href="challenge.html" data-i18n="nav.challenge">单词挑战</a></li>
+        <li><a href="vokabeln.html" data-i18n="nav.vocab">词汇表</a></li>
+        <li><a href="notizen.html" data-i18n="nav.notes">笔记</a></li>
+        <li><a href="kontakt.html" data-i18n="nav.contact">联系</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="error-page">
+    <section class="error-card" aria-labelledby="error-h1">
+      <p class="error-code" aria-hidden="true">404</p>
+      <h1 id="error-h1" data-i18n="error.h1">这个页面走丢了</h1>
+      <p data-i18n="error.p">地址可能敲错了，或者这一页被我挪走了。下面的入口都还能用。</p>
+      <p class="error-actions">
+        <a class="btn" href="index.html" data-i18n="error.home">回首页</a>
+        <a class="btn btn-ghost" href="vokabeln.html" data-i18n="error.vocab">去看词汇表</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p data-i18n="footer.text">© 2026 揣卓扬 · 本站是 Web Development 课程项目，内容与代码均由本人编写。</p>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+</body>
+</html>

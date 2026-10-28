@@ -3,22 +3,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title data-i18n="page.index.title">德语 A2→B1 自学站｜一个中国学生的进阶记录</title>
-  <meta name="description" content="从德语 A2 到 B1 的自学记录：每周怎么学、用什么材料、哪些语法必须补。">
+  <title data-i18n="page.index.title">德语自习室 Deutsch-Lernzimmer｜A2 → B1 开放学习站</title>
+  <meta name="description" content="一个开放的德语 A2→B1 学习站：203 个高频词、可搜索的知识索引、单词挑战、课堂笔记。没有后端，进度存在你自己的浏览器里。">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <header>
     <div class="header-top">
-      <p class="site-title"><a href="index.html" data-i18n="site.title">德语 A2 → B1 自学站</a></p>
+      <p class="site-title"><a href="index.html" data-i18n="site.title">Deutsch-Lernzimmer 德语自习室</a></p>
       <button type="button" class="lang-toggle" id="lang-toggle"
               data-i18n="lang.button" data-i18n-aria-label="lang.aria">EN</button>
     </div>
     <nav aria-label="主导航" data-i18n-aria-label="nav.main">
       <ul>
         <li><a href="index.html" aria-current="page" data-i18n="nav.home">首页</a></li>
-        <li><a href="lernen.html" data-i18n="nav.methods">学习方法</a></li>
+        <li><a href="wissen.html" data-i18n="nav.index">知识索引</a></li>
+        <li><a href="challenge.html" data-i18n="nav.challenge">单词挑战</a></li>
         <li><a href="vokabeln.html" data-i18n="nav.vocab">词汇表</a></li>
         <li><a href="notizen.html" data-i18n="nav.notes">笔记</a></li>
         <li><a href="kontakt.html" data-i18n="nav.contact">联系</a></li>
@@ -27,75 +28,180 @@
   </header>
 
   <main>
-    <h1 data-i18n="index.h1">从 A2 走到 B1，我把这条路记下来</h1>
-    <p data-i18n="index.lead">课堂能给你语法表，但不会给你每周的时间表。缺的从来不是教材，是「每天具体做什么」。</p>
-
-    <figure class="hero">
-      <img src="images/lernpfad.svg" width="620" height="220"
-           alt="一条从 A2 弯向 B1 的路径，上面四个编号里程碑依次是：词汇、听力、语法、写作与口语"
-           data-i18n-alt="index.img.alt">
-      <figcaption data-i18n="index.img.caption">四条线同时往前走 —— 不是先学完词汇再学语法。</figcaption>
-    </figure>
-
-    <section aria-labelledby="warum">
-      <h2 id="warum" data-i18n="index.why.h2">为什么有这个站</h2>
-      <p><span data-i18n="index.why.p1a">我是海南比勒费尔德应用科学大学计算机科学专业的学生，德语是我的副专业。课上到 A2 之后，我发现真正卡住我的不是某个语法点，而是三件事：</span><strong data-i18n="index.why.p1b">课本之外要不要加东西、每天一小时怎么分配、学了不知道有没有进步</strong><span data-i18n="index.why.p1c">。</span></p>
-      <p data-i18n="index.why.p2">所以我一边走一边把方法记在这里。它首先是给我自己用的行动清单，其次才是给处境相似的人（中文母语、课业不轻、只有碎片时间）看的参考。</p>
+    <section class="hero-grid" aria-labelledby="hero-h1">
+      <div>
+        <p class="kicker" data-i18n="index.kicker">开放的德语学习站 · A2 → B1</p>
+        <h1 id="hero-h1" data-i18n="index.h1">A2 到 B1，不该一个人硬扛</h1>
+        <p class="lead" data-i18n="index.lead">这里的东西谁都能拿去用：203 个高频词、一份每天 60 分钟的周计划、A2 升 B1 必须补的 8 个语法点。觉得缺什么、哪里写错了，你也可以直接补上来。</p>
+        <p class="hero-cta">
+          <a class="btn" href="challenge.html" data-i18n="index.cta.word">先来 10 道题</a>
+          <a class="btn btn-ghost" href="#beitragen" data-i18n="index.cta.join">我也要加东西</a>
+        </p>
+        <p class="honest" data-i18n="index.honest">先把话说清楚：本站没有后端。「登录」、学习进度、你投稿的词和建议，都只保存在你自己这台电脑的浏览器里（localStorage），不会上传到服务器。所以它是「大家整理好的内容 + 你自己的学习空间」，不是社交网站。</p>
+      </div>
+      <figure class="hero-fig">
+        <img src="images/lernpfad.svg" width="620" height="220"
+             alt="一条从 A2 弯向 B1 的路径，上面四个编号里程碑依次是：词汇、听力、语法、写作与口语"
+             data-i18n-alt="index.img.alt">
+      </figure>
     </section>
 
-    <section aria-labelledby="stand">
-      <h2 id="stand" data-i18n="index.stand.h2">我的起点和现状</h2>
-      <div class="table-wrap" role="region" aria-label="个人德语学习进度表"
-           data-i18n-aria-label="index.stand.table.aria" tabindex="0">
-      <table>
-        <caption data-i18n="index.stand.caption">个人德语学习进度（2026 年秋季）</caption>
-        <tbody>
-          <tr><th scope="row" data-i18n="index.stand.start">起点</th><td data-i18n="index.stand.start.v">A2（学校德语副专业课程）</td></tr>
-          <tr><th scope="row" data-i18n="index.stand.now">现状</th><td data-i18n="index.stand.now.v">冲 B1：能读慢速新闻，能写 80–120 词的邮件（比如回德国朋友的中秋问候）</td></tr>
-          <tr><th scope="row" data-i18n="index.stand.goal">目标</th><td><strong data-i18n="index.stand.goal.s">先通过 B1 考试拿到证书</strong><span data-i18n="index.stand.goal.r">；用了它读文献、应付实习面试是之后的事</span></td></tr>
-          <tr><th scope="row" data-i18n="index.stand.time">每周投入</th><td data-i18n="index.stand.time.v">每天 1 小时，一周约 7 小时 —— 固定时段，不靠「有空就学」</td></tr>
-        </tbody>
-      </table>
+    <section aria-labelledby="drei">
+      <h2 id="drei" data-i18n="index.three.h2">今天先做这三件事</h2>
+      <div class="cards-3">
+        <div class="mini-card">
+          <svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><rect x="6" y="10" width="26" height="30" rx="3" fill="none" stroke="#b8141e" stroke-width="2.5"/><rect x="15" y="5" width="27" height="30" rx="3" fill="#fff" stroke="#b8141e" stroke-width="2.5"/><path d="M21 14h15M21 20h15M21 26h9" stroke="#b8141e" stroke-width="2.5" stroke-linecap="round"/></svg>
+          <h3 data-i18n="index.three.t1">抽 10 个词</h3>
+          <p data-i18n="index.three.d1">不用挑，随机来一题一题点。选错了会立刻告诉你正确答案和例句。</p>
+          <p><a class="btn btn-ghost" href="challenge.html" data-i18n="index.three.a1">去挑战</a></p>
+        </div>
+        <div class="mini-card">
+          <svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle cx="21" cy="21" r="12" fill="none" stroke="#b8141e" stroke-width="2.5"/><path d="M30 30l10 10" stroke="#b8141e" stroke-width="3" stroke-linecap="round"/></svg>
+          <h3 data-i18n="index.three.t2">查一个词</h3>
+          <p data-i18n="index.three.d2">203 个词，可搜索、可按词类或主题筛，每个词配一句完整例句。</p>
+          <p><a class="btn btn-ghost" href="vokabeln.html" data-i18n="index.three.a2">去查词</a></p>
+        </div>
+        <div class="mini-card">
+          <svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><rect x="6" y="9" width="36" height="30" rx="3" fill="none" stroke="#b8141e" stroke-width="2.5"/><path d="M6 18h36M16 18v21M27 18v21M38 18v21" stroke="#b8141e" stroke-width="2"/></svg>
+          <h3 data-i18n="index.three.t3">抄一份周计划</h3>
+          <p data-i18n="index.three.d3">周一到周日各干一件事，每天 60 分钟，直接照抄，不用自己想。</p>
+          <p><a class="btn btn-ghost" href="wissen.html" data-i18n="index.three.a3">看知识索引</a></p>
+        </div>
       </div>
     </section>
 
-    <section aria-labelledby="inhalt">
-      <h2 id="inhalt" data-i18n="index.inhalt.h2">这个站有什么</h2>
-      <ul class="link-grid">
-        <li><a href="lernen.html" data-i18n="nav.methods">学习方法</a><span data-i18n="index.inhalt.li1.rest"> —— 词汇、听力、语法、写作口语四条线，每条给具体材料和每周安排</span></li>
-        <li data-i18n="index.inhalt.li2">语法清单 —— A2 升 B1 必须补的 8 个点，写在「学习方法」页里</li>
-        <li><a href="vokabeln.html" data-i18n="nav.vocab">词汇表</a><span data-i18n="index.inhalt.li3.rest"> —— 31 个高频词，可按词类筛选、可搜索，每个词配一句例句</span></li>
-        <li><a href="kontakt.html" data-i18n="nav.contact">联系页</a><span data-i18n="index.inhalt.li4.rest"> —— 表单 + 浏览器校验（本站没有后端，不会真的发邮件）</span></li>
-      </ul>
+    <section aria-labelledby="haben">
+      <h2 id="haben" data-i18n="index.have.h2">站里已经有的东西</h2>
+      <div class="cards-3">
+        <div class="mini-card">
+          <h3 data-i18n="index.have.t1">知识索引</h3>
+          <p data-i18n="index.have.d1">8 个必补语法点、四条能力线怎么练、用什么材料、踩过的坑 —— 20 条，可搜索、可分类。</p>
+          <p><a class="btn btn-ghost" href="wissen.html" data-i18n="index.have.a1">去看看</a></p>
+        </div>
+        <div class="mini-card">
+          <h3 data-i18n="index.have.t2">词汇表</h3>
+          <p data-i18n="index.have.d2">203 个词，词性、中文、例句齐全，支持按词类和主题双重筛选。</p>
+          <p><a class="btn btn-ghost" href="vokabeln.html" data-i18n="index.have.a2">去查词</a></p>
+        </div>
+        <div class="mini-card">
+          <h3 data-i18n="index.have.t3">课堂笔记</h3>
+          <p data-i18n="index.have.d3">从课本和听写本整理下的主题词群：天气、城市、职业、未来计划、商业创意。</p>
+          <p><a class="btn btn-ghost" href="notizen.html" data-i18n="index.have.a3">看笔记</a></p>
+        </div>
+      </div>
     </section>
 
-    <section aria-labelledby="woche">
-      <h2 id="woche" data-i18n="index.woche.h2">我现在每周怎么过</h2>
-      <div class="table-wrap" role="region" aria-label="一周德语学习时间表"
-           data-i18n-aria-label="index.woche.table.aria" tabindex="0">
-      <table>
-        <caption data-i18n="index.woche.caption">一周德语学习时间表（每天 1 小时）</caption>
-        <thead>
-          <tr><th scope="col" data-i18n="index.woche.th1">星期</th><th scope="col" data-i18n="index.woche.th2">做什么</th><th scope="col" data-i18n="index.woche.th3">时长</th></tr>
-        </thead>
-        <tbody>
-          <tr><td data-i18n="index.woche.mon">周一</td><td data-i18n="index.woche.mon.task">词汇：20 个新词，卡在句子里记（不背孤立单词表）</td><td data-i18n="index.woche.min">60 分钟</td></tr>
-          <tr><td data-i18n="index.woche.tue">周二</td><td data-i18n="index.woche.tue.task">听力：课本音频精听一段（听 → 写 → 对原文 → 跟读）</td><td data-i18n="index.woche.min">60 分钟</td></tr>
-          <tr><td data-i18n="index.woche.wed">周三</td><td data-i18n="index.woche.wed.task">语法：只攻一个点，做练习册对应题目</td><td data-i18n="index.woche.min">60 分钟</td></tr>
-          <tr><td data-i18n="index.woche.thu">周四</td><td data-i18n="index.woche.thu.task">写作：课本单元主题，写 100 词短文</td><td data-i18n="index.woche.min">60 分钟</td></tr>
-          <tr><td data-i18n="index.woche.fri">周五</td><td data-i18n="index.woche.fri.task">口语：录音复述周二听的内容，回听自己的错误</td><td data-i18n="index.woche.min">60 分钟</td></tr>
-          <tr><td data-i18n="index.woche.sat">周六</td><td data-i18n="index.woche.sat.task">补薄弱环节：哪条线掉队就补哪条</td><td data-i18n="index.woche.min">60 分钟</td></tr>
-          <tr><td data-i18n="index.woche.sun">周日</td><td data-i18n="index.woche.sun.task">整理错题本 + 复盘本周，定下周攻哪个语法点</td><td data-i18n="index.woche.min">60 分钟</td></tr>
-        </tbody>
-      </table>
+    <section aria-labelledby="worte">
+      <h2 id="worte" data-i18n="index.word.h2">今日 5 词</h2>
+      <p class="hint" data-i18n="index.word.hint">点卡片翻面看例句；学会了点一下，进度记在本机。</p>
+      <div class="word-grid" id="wordGrid"></div>
+      <p><button type="button" class="btn btn-ghost" id="reroll" data-i18n="index.word.reroll">换一批</button></p>
+
+      <div class="progress-wrap">
+        <div class="user-row">
+          <label for="nameInput" data-i18n="index.prog.label">你的名字（只存本机）</label>
+          <input id="nameInput" type="text" maxlength="16" autocomplete="nickname" placeholder="XXX">
+          <button type="button" class="btn" id="saveName" data-i18n="index.prog.save">保存</button>
+        </div>
+        <p><span data-i18n="index.prog.a">我的进度：已学会</span> <b id="mCount">0</b> / <b id="mTotal">0</b> <span data-i18n="index.prog.b">个词</span></p>
+        <div class="bar"><i id="barFill"></i></div>
+        <p class="small" id="loginHint" data-i18n="index.prog.hint">还没留名字也没关系，进度照样记。</p>
+      </div>
+    </section>
+
+    <section id="beitragen" aria-labelledby="beitragen-h">
+      <h2 id="beitragen-h" data-i18n="index.join.h2">你也可以往这里加东西</h2>
+      <p data-i18n="index.join.lead">看到缺的词、想吐槽的设计、觉得该补的语法点，都可以写在下面。</p>
+      <div class="two-col">
+        <form class="panel" id="wordForm" novalidate>
+          <h3 data-i18n="index.form.word.h3">投稿一个词</h3>
+          <p class="sub" data-i18n="index.form.word.sub">德语词 + 中文意思 + 一句例句，会出现在下面的列表里。</p>
+          <div class="field">
+            <label for="wDe" data-i18n="index.form.de">德语</label>
+            <input id="wDe" type="text" required placeholder="die Geduld">
+          </div>
+          <div class="field">
+            <label for="wZh" data-i18n="index.form.zh">中文</label>
+            <input id="wZh" type="text" required placeholder="耐心">
+          </div>
+          <div class="field">
+            <label for="wEx" data-i18n="index.form.ex">例句（可选）</label>
+            <input id="wEx" type="text" placeholder="Ich brauche mehr Geduld.">
+          </div>
+          <button type="submit" class="btn" data-i18n="index.form.submit">加进去</button>
+          <p class="msg" id="wordMsg" role="status"></p>
+          <ul class="item-list" id="myWordList"></ul>
+        </form>
+
+        <form class="panel" id="ideaForm" novalidate>
+          <h3 data-i18n="index.form.idea.h3">提一条建议</h3>
+          <p class="sub" data-i18n="index.form.idea.sub">页面太乱？想要什么功能？写下来。</p>
+          <div class="field">
+            <label for="ideaText" data-i18n="index.form.idea.label">你的想法</label>
+            <textarea id="ideaText" required placeholder="希望词表能按考试话题分级……"></textarea>
+          </div>
+          <button type="submit" class="btn" data-i18n="index.form.save">记下来</button>
+          <button type="button" class="btn btn-ghost" id="copyBtn" data-i18n="index.form.copy">复制成一段话发给我</button>
+          <p class="msg" id="ideaMsg" role="status"></p>
+          <ul class="item-list" id="myIdeaList"></ul>
+        </form>
+      </div>
+    </section>
+
+    <section aria-labelledby="mitmachen">
+      <h2 id="mitmachen" data-i18n="index.step.h2">怎么参与</h2>
+      <ol class="steps">
+        <li><b data-i18n="index.step.1b">先用</b><span data-i18n="index.step.1r"> —— 词表、索引、周计划，不用注册也不用问，直接抄。</span></li>
+        <li><b data-i18n="index.step.2b">再补</b><span data-i18n="index.step.2r"> —— 你课本上有、这里没有的词，投稿上来；错的也告诉我。</span></li>
+        <li><b data-i18n="index.step.3b">最后传</b><span data-i18n="index.step.3r"> —— 这套东西管用的话，把网址丢给同班同学，让他们少走一段弯路。</span></li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="galerie">
+      <h2 id="galerie" data-i18n="index.gal.h2">图也能看清</h2>
+      <p data-i18n="index.gal.lead">点任意一张放大看（纯 HTML + CSS + 一点 JS，不用插件）。</p>
+      <div class="gallery">
+        <figure>
+          <button type="button" class="shot" data-cap="四条线同时往前走：词汇、听力、语法、写作与口语">
+            <img src="images/lernpfad.svg" width="620" height="220" alt="从 A2 到 B1 的学习路径示意图，四个里程碑"
+                 data-i18n-alt="index.gal.alt1">
+          </button>
+          <figcaption data-i18n="index.gal.cap1">学习路径：四条线不是走完一条再走另一条</figcaption>
+        </figure>
+        <figure>
+          <button type="button" class="shot" data-cap="词卡：正面德语，背面中文和例句">
+            <img src="images/wortkarten.svg" width="400" height="300" alt="三张叠放的德语词卡，正面写 die Geduld"
+                 data-i18n-alt="index.gal.alt2">
+          </button>
+          <figcaption data-i18n="index.gal.cap2">词卡：随机抽、翻面看例句</figcaption>
+        </figure>
+        <figure>
+          <button type="button" class="shot" data-cap="一周七天，每天 60 分钟，周六留作补课缓冲">
+            <img src="images/wochenplan.svg" width="400" height="300" alt="一周七天的时间分配柱状图，周六标为补课缓冲"
+                 data-i18n-alt="index.gal.alt3">
+          </button>
+          <figcaption data-i18n="index.gal.cap3">周计划：每天只做一件事</figcaption>
+        </figure>
       </div>
     </section>
   </main>
 
   <footer>
-    <p data-i18n="footer.text">© 2026 揣卓扬 · 本站是 Web Development 课程项目，内容与代码均由本人编写。</p>
+    <p data-i18n="footer.text">© 2026 揣卓扬 · 本站是 Web Development 课程项目，内容与代码均由本人编写。没有后端，数据只在本机浏览器。</p>
   </footer>
 
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="查看大图" data-i18n-aria-label="index.gal.aria">
+    <button type="button" class="lightbox-close" id="lbClose" aria-label="关闭" data-i18n-aria-label="index.gal.close">×</button>
+    <div>
+      <div class="lightbox-stage" id="lbStage"></div>
+      <p class="lightbox-cap" id="lbCap"></p>
+    </div>
+  </div>
+
   <script src="js/i18n.js"></script>
+  <script src="js/vokabeln-data.js"></script>
+  <script src="js/vokabeln-data-b1.js"></script>
+  <script src="js/vokabeln-data-b1-2.js"></script>
+  <script src="js/home.js"></script>
 </body>
 </html>

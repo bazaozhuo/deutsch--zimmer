@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="page.challenge.title">单词挑战｜Deutsch-Lernzimmer 德语自习室</title>
+  <meta name="description" content="德语词汇选择题：德语选中文、中文选德语，可选范围（全部 / B1 高频 / 课本与笔记）和题量，答完给成绩和错题回顾。">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-top">
+      <p class="site-title"><a href="index.html" data-i18n="site.title">Deutsch-Lernzimmer 德语自习室</a></p>
+      <button type="button" class="lang-toggle" id="lang-toggle"
+              data-i18n="lang.button" data-i18n-aria-label="lang.aria">EN</button>
+    </div>
+    <nav aria-label="主导航" data-i18n-aria-label="nav.main">
+      <ul>
+        <li><a href="index.html" data-i18n="nav.home">首页</a></li>
+        <li><a href="wissen.html" data-i18n="nav.index">知识索引</a></li>
+        <li><a href="challenge.html" aria-current="page" data-i18n="nav.challenge">单词挑战</a></li>
+        <li><a href="vokabeln.html" data-i18n="nav.vocab">词汇表</a></li>
+        <li><a href="notizen.html" data-i18n="nav.notes">笔记</a></li>
+        <li><a href="kontakt.html" data-i18n="nav.contact">联系</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 data-i18n="challenge.h1">单词挑战</h1>
+    <p class="quiz-intro" data-i18n="challenge.lead">一轮 10 题，四个选项选一个。选错会立刻告诉你正确答案，并把例句摆出来。成绩只存在这台电脑的浏览器里。</p>
+
+    <div class="quiz-controls">
+      <div>
+        <label for="mode" data-i18n="challenge.mode.label">考什么</label>
+        <select id="mode">
+          <option value="de-zh" data-i18n="challenge.mode.deZh">看德语 → 选中文</option>
+          <option value="zh-de" data-i18n="challenge.mode.zhDe">看中文 → 选德语</option>
+        </select>
+      </div>
+      <div>
+        <label for="scope" data-i18n="challenge.scope.label">考哪些词</label>
+        <select id="scope">
+          <option value="all" data-i18n="challenge.scope.all">全部 203 个词</option>
+          <option value="b1" data-i18n="challenge.scope.b1">只要 B1 高频（96 个）</option>
+          <option value="notiz" data-i18n="challenge.scope.notiz">只要课本与笔记（107 个）</option>
+        </select>
+      </div>
+      <div>
+        <label for="len" data-i18n="challenge.len.label">题量</label>
+        <select id="len">
+          <option value="10" data-i18n="challenge.len.ten">10 题</option>
+          <option value="20" data-i18n="challenge.len.twenty">20 题</option>
+        </select>
+      </div>
+      <p class="stats">
+        <span><span data-i18n="challenge.stat.qno">第</span> <b id="qNo">1</b>/<b id="qTot">10</b></span>
+        <span><span data-i18n="challenge.stat.ok">答对</span> <b id="okCount">0</b></span>
+        <span class="streak"><span data-i18n="challenge.stat.streak">连击</span> <b id="streak">0</b></span>
+      </p>
+    </div>
+
+    <section class="quiz-card" id="quizCard" aria-live="polite">
+      <p class="q-label" id="qLabel">这个德语词是什么意思？</p>
+      <p class="q-word" id="qWord">—</p>
+      <p class="q-sub" id="qSub"></p>
+      <div class="options" id="options"></div>
+      <p class="feedback" id="feedback" role="status"></p>
+      <p class="q-actions">
+        <button type="button" class="btn" id="nextBtn" disabled>下一题</button>
+        <button type="button" class="btn btn-ghost" id="restartBtn" data-i18n="challenge.btn.restart">重新开始</button>
+      </p>
+    </section>
+
+    <section class="result" id="result" hidden>
+      <h2 id="resTitle">这轮结束了</h2>
+      <p class="score"><span id="resScore">0</span><small> / <span id="resTotal">10</span></small></p>
+      <p class="meta" id="resMeta"></p>
+      <p class="q-actions">
+        <button type="button" class="btn" id="againBtn" data-i18n="challenge.btn.again">再来一轮</button>
+        <button type="button" class="btn btn-ghost" id="backBtn" data-i18n="challenge.btn.back">回到题目</button>
+      </p>
+      <h3 class="wrong-head" id="wrongHead">错题回顾</h3>
+      <ul class="wrong-list" id="wrongList"></ul>
+    </section>
+
+    <p class="quiz-hint" data-i18n="challenge.hint">键盘也能用：1–4 选答案，Enter 下一题。</p>
+  </main>
+
+  <footer>
+    <p data-i18n="footer.text">© 2026 揣卓扬 · 本站是 Web Development 课程项目，内容与代码均由本人编写。没有后端。</p>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/vokabeln-data.js"></script>
+  <script src="js/vokabeln-data-b1.js"></script>
+  <script src="js/vokabeln-data-b1-2.js"></script>
+  <script src="js/challenge.js"></script>
+</body>
+</html>

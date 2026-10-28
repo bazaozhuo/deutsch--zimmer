@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" role="img" aria-labelledby="wcTitle">
+  <title id="wcTitle">三张叠放的德语词卡，正面写 die Geduld（耐心）</title>
+  <rect width="400" height="300" fill="#fbf9f4"/>
+  <g transform="rotate(-8 200 150)">
+    <rect x="86" y="66" width="228" height="150" rx="12" fill="#ffffff" stroke="#e2ded4" stroke-width="2"/>
+  </g>
+  <g transform="rotate(5 200 150)">
+    <rect x="92" y="76" width="228" height="150" rx="12" fill="#ffffff" stroke="#e2ded4" stroke-width="2"/>
+    <text x="116" y="118" font-family="Georgia, serif" font-size="22" font-weight="700" fill="#1b1b1b">die Geduld</text>
+    <line x1="116" y1="134" x2="296" y2="134" stroke="#e2ded4" stroke-width="2"/>
+    <text x="116" y="162" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#4a4a4a">耐心</text>
+    <text x="116" y="196" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#b8141e">Ich brauche mehr Geduld.</text>
+  </g>
+  <rect x="150" y="238" width="112" height="18" rx="9" fill="#c9982b" opacity="0.22"/>
+  <text x="158" y="251" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#8f6a12">点一下翻面看例句</text>
+</svg>

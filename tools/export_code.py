@@ -27,18 +27,22 @@ DEFAULT_OUT = os.path.join(os.path.dirname(REPO), "代码汇总")
 # 按后缀分组：顺序就是给人看的顺序
 GROUPS: list[tuple[str, str, str, list[str]]] = [
     ("01-HTML", "HTML", "html", [
-        "index.html", "lernen.html", "vokabeln.html", "notizen.html", "kontakt.html",
+        "index.html", "wissen.html", "challenge.html", "vokabeln.html",
+        "notizen.html", "kontakt.html", "404.html",
     ]),
     ("02-CSS", "CSS", "css", ["css/style.css"]),
     ("03-JavaScript", "JavaScript", "javascript", [
         "js/i18n.js", "js/vokabeln-data.js", "js/vokabeln-data-b1.js",
-        "js/vokabeln-data-b1-2.js", "js/vokabeln.js", "js/kontakt.js",
+        "js/vokabeln-data-b1-2.js", "js/vokabeln.js", "js/home.js",
+        "js/challenge.js", "js/wissen.js", "js/kontakt.js",
     ]),
 ]
 
 ROLE = {
-    "index.html": "首页：为什么做这个站、我的进度、每周时间表、插图",
-    "lernen.html": "学习方法：材料、四条学习线、A2→B1 语法清单、踩过的坑",
+    "index.html": "首页：开放学习站定位、今日 5 词、学习进度、投稿与建议、图片灯箱",
+    "wissen.html": "知识索引：20 条可搜索可展开的条目（8 个语法点、四条能力线、材料、避坑）",
+    "challenge.html": "单词挑战：选择题、范围/题量可选、成绩与错题回顾",
+    "404.html": "404 页：找不到网址时的引导页",
     "vokabeln.html": "词汇表：搜索框 + 词类/主题两组筛选 + 表格骨架",
     "notizen.html": "我的笔记：听写练习原文与订正、词表来源",
     "kontakt.html": "联系页：表单（浏览器原生校验）",
@@ -48,6 +52,9 @@ ROLE = {
     "js/vokabeln-data-b1.js": "词表数据第 2 份：B1 高频词 50 个",
     "js/vokabeln-data-b1-2.js": "词表数据第 3 份：B1 高频词 46 个",
     "js/vokabeln.js": "词汇表逻辑：合并三份数据、搜索、双重筛选、按语言重渲染",
+    "js/home.js": "首页交互：随机 5 词翻卡、进度条、投稿词、建议与一键复制、图片灯箱",
+    "js/challenge.js": "单词挑战逻辑：出题（同词性干扰项）、判分、连击、错题回顾、本机最高分",
+    "js/wissen.js": "知识索引逻辑：关键词搜索 + 分类筛选 + 结果计数（渐进增强）",
     "js/kontakt.js": "联系表单：拦下默认提交、调浏览器校验、显示确认信息",
 }
 

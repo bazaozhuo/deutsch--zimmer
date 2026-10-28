@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" role="img" aria-labelledby="wpTitle">
+  <title id="wpTitle">一周七天的时间分配柱状图，周六标为补课缓冲</title>
+  <rect width="400" height="300" fill="#fbf9f4"/>
+  <text x="30" y="42" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#1b1b1b">一周 7 小时怎么分</text>
+  <text x="30" y="70" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#4a4a4a">每天 60 分钟 · 金色那根是「补掉队」的缓冲</text>
+  <g>
+    <rect x="38" y="150" width="28" height="110" rx="4" fill="#b8141e"/>
+    <rect x="88" y="170" width="28" height="90"  rx="4" fill="#b8141e" opacity="0.85"/>
+    <rect x="138" y="185" width="28" height="75" rx="4" fill="#b8141e" opacity="0.72"/>
+    <rect x="188" y="160" width="28" height="100" rx="4" fill="#b8141e" opacity="0.9"/>
+    <rect x="238" y="195" width="28" height="65" rx="4" fill="#b8141e" opacity="0.6"/>
+    <rect x="288" y="205" width="28" height="55" rx="4" fill="#c9982b"/>
+    <rect x="338" y="220" width="28" height="40" rx="4" fill="#b8141e" opacity="0.45"/>
+  </g>
+  <line x1="30" y1="260" x2="372" y2="260" stroke="#e2ded4" stroke-width="2"/>
+  <g font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#4a4a4a" text-anchor="middle">
+    <text x="52" y="280">周一</text><text x="102" y="280">周二</text><text x="152" y="280">周三</text>
+    <text x="202" y="280">周四</text><text x="252" y="280">周五</text><text x="302" y="280">周六</text><text x="352" y="280">周日</text>
+  </g>
+</svg>
