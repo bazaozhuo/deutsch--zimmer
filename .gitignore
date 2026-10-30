@@ -1,8 +1,16 @@
+# 系统和编辑器
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.log
+
+# 临时/锁文件
+*.tmp
+~$*
+
 # 临时调试/截图用的文件，不进仓库
 _*.html
 _*.png
 _*.json
-
-# 编辑器
-.vscode/
-.DS_Store
