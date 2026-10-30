@@ -33,7 +33,18 @@
 
   <main id="main">
     <h1 data-i18n="contact.h1">联系与反馈</h1>
-    <p data-i18n="contact.lead">这个站是开放的：发现错字、有材料想推荐、觉得缺了哪个语法点，或者你也在 A2 到 B1 的路上 —— 都欢迎写一封。（本站没有后端：表单只在本机校验，不会真的发出去 —— 想让我收到，把内容复制下来发我微信或邮件。）</p>
+    <p data-i18n="contact.lead">这个站是开放的：发现错字、有材料想推荐、觉得缺了哪个语法点，或者你也在 A2 到 B1 的路上 —— 都欢迎写一封。最直接的方式就是发邮件给我，地址在下面。</p>
+
+
+    <section aria-labelledby="mail-h">
+      <h2 id="mail-h" data-i18n="contact.mail.h2">直接发邮件</h2>
+      <p data-i18n="contact.mail.p">不想填表单？直接写到这里，我每天都会看：</p>
+      <p class="mail-box">
+        <a class="mail-link" href="mailto:X20250028@stu.hibiuh.edu.cn">X20250028@stu.hibiuh.edu.cn</a>
+        <button type="button" class="btn btn-ghost" id="copy-mail" data-i18n="contact.mail.copy">复制地址</button>
+      </p>
+      <p class="msg" id="mail-msg" role="status"></p>
+    </section>
 
     <section aria-labelledby="form-h">
       <h2 id="form-h" data-i18n="contact.form.h2">写一封</h2>
@@ -71,7 +82,7 @@
 
       <p id="form-status" role="status" aria-live="polite"></p>
 
-      <p class="hint" data-i18n="contact.note">说明：本站是课程项目，没有后端服务器。表单只做前端校验并给出确认信息，不会真的发出邮件 —— 这是有意的设计取舍，不是缺陷。</p>
+      <p class="hint" data-i18n="contact.note">说明：本站没有后端服务器。点「发送」会打开你自己的邮件客户端，把填好的内容预填成一封信发给上面的地址 —— 中间没有服务器，你还能在发之前再看一遍。</p>
     </section>
   </main>
 

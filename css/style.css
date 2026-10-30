@@ -832,3 +832,23 @@ body.page-404 main {
   position: absolute; width: 1px; height: 1px; margin: -1px;
   padding: 0; border: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
 }
+
+/* ---------- 联系页：邮箱 ---------- */
+.mail-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 0.9rem 1rem;
+  margin: 0 0 0.6rem;
+}
+.mail-link {
+  font-size: 1rem;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.mail-box .btn { font-size: 0.85rem; padding: 0.4rem 0.85rem; }

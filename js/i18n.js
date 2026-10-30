@@ -110,6 +110,10 @@
       "contact.h1": "Contact & feedback",
       "contact.lead": "This site is open: spot a typo, have material to recommend, think a grammar point is missing, or are you also on the A2 to B1 road? Write to me. (No backend — the form validates locally and is not actually sent; copy the text and send it to me on WeChat or by email.)",
       "contact.form.h2": "Write a message",
+      "contact.mail.h2": "Email me directly",
+      "contact.mail.p": "Don't want to fill in a form? Write to this address — I read it every day:",
+      "contact.mail.copy": "Copy address",
+
       "contact.name": "Your name",
       "contact.email": "Email",
       "contact.subject": "Subject",
@@ -121,7 +125,7 @@
       "contact.opt4": "Something else",
       "contact.message.hint": "At least 10 characters. Please do not include ID numbers, addresses or other private data.",
       "contact.submit": "Send",
-      "contact.note": "Note: this is a course project with no backend server. The form validates in the browser and shows a confirmation only — it does not actually send an email. That is a deliberate design trade-off, not a defect.",
+      "contact.note": "Note: there is no backend server. Pressing Send opens your own mail app with the message pre-filled and addressed to the address above — nothing goes through a server, and you can still review it before sending.",
 
       /* ---------- W4 新增：首页改版 / 知识索引 / 单词挑战 ---------- */
       "skip.link": "Skip to main content",
