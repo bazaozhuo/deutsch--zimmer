@@ -6,6 +6,19 @@
   <title data-i18n="page.wissen.title">知识索引｜Deutsch-Lernzimmer 德语自习室</title>
   <meta name="description" content="站内所有知识的目录：A2 升 B1 必补的 8 个语法点、四条能力线怎么练、用什么材料、踩过的坑。可搜索、可分类筛选。">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#fbf9f4">
+  <!-- 先定主题再渲染，避免深色用户看到一瞬间的白闪 -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark' || (t === null && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -16,8 +29,22 @@
   <header>
     <div class="header-top">
       <p class="site-title"><a href="index.html" data-i18n="site.title">Deutsch-Lernzimmer 德语自习室</a></p>
-      <button type="button" class="lang-toggle" id="lang-toggle"
-              data-i18n="lang.button" data-i18n-aria-label="lang.aria">EN</button>
+      <div class="header-controls">
+        <button type="button" class="theme-toggle" id="theme-toggle"
+                aria-pressed="false" aria-label="切换到深色模式">
+          <svg class="theme-toggle__sun" viewBox="0 0 24 24" width="16" height="16" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M12 2.8v2.1M12 19.1v2.1M2.8 12h2.1M19.1 12h2.1M5.3 5.3l1.5 1.5M17.2 17.2l1.5 1.5M18.7 5.3l-1.5 1.5M6.8 17.2l-1.5 1.5"
+                  stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+          <svg class="theme-toggle__moon" viewBox="0 0 24 24" width="16" height="16" fill="none" aria-hidden="true">
+            <path d="M20 14.2A8.2 8.2 0 0 1 9.8 4a8.4 8.4 0 1 0 10.2 10.2Z"
+                  stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button type="button" class="lang-toggle" id="lang-toggle"
+                data-i18n="lang.button" data-i18n-aria-label="lang.aria">EN</button>
+      </div>
     </div>
     <nav aria-label="主导航" data-i18n-aria-label="nav.main">
       <ul>
@@ -258,6 +285,7 @@
   </footer>
 
   <script src="js/i18n.js"></script>
+  <script src="js/theme.js"></script>
   <script src="js/wissen.js"></script>
 </body>
 </html>

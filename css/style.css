@@ -15,6 +15,23 @@
   --gold: #c9982b;         /* 点缀色 */
   --radius: 10px;
   --max-width: 66rem;
+
+  /* 组件用的扩展变量（浅色默认值）；深色模式在文件末尾整体覆盖 */
+  --on-accent: #ffffff;    /* 红底上的文字 */
+  --surface: #ffffff;      /* 输入框 / 卡片 / 按钮表面 */
+  --card-soft: #fffdf7;    /* 次级卡片底色 */
+  --thead: #f3efe6;        /* 表头 */
+  --row-hover: #fbf6ec;    /* 表格行悬停 */
+  --field-border: #cfc9bb;
+  --field-border-hover: #b3ac9c;
+  --ok: #1d7a3c;
+  --ok-bg: #f1faf3;
+  --bad-bg: #fdf1f1;
+  --cat-border: #f0d4d2;
+  --cat-bg: #fdf3f2;
+  --chip-bg: #f3ece2;
+  --overlay: rgba(24, 20, 18, 0.86);
+  --on-overlay: #f3ece2;
 }
 
 * { box-sizing: border-box; }
@@ -145,12 +162,12 @@ th, td {
   vertical-align: top;
 }
 thead th {
-  background: #f3efe6;
+  background: var(--thead);
   border-bottom: 2px solid var(--accent);
   font-weight: 600;
   white-space: nowrap;
 }
-tbody tr:hover { background: #fbf6ec; }
+tbody tr:hover { background: var(--row-hover); }
 
 /* 词汇表：德语列窄、例句列淡 */
 table.vokabeln th[scope="row"] { width: 20%; font-weight: 600; }
@@ -172,10 +189,10 @@ input, select, textarea {
   font: inherit;
   color: inherit;
   background: var(--card);
-  border: 1px solid #cfc9bb;
+  border: 1px solid var(--field-border);
   border-radius: 6px;
 }
-input:hover, select:hover, textarea:hover { border-color: #b3ac9c; }
+input:hover, select:hover, textarea:hover { border-color: var(--field-border-hover); }
 input:focus, select:focus, textarea:focus {
   outline: 3px solid rgba(184, 20, 30, 0.22);
   border-color: var(--accent);
@@ -197,7 +214,7 @@ textarea { resize: vertical; }
   border-radius: 6px;
   border: 1px solid var(--accent);
   background: var(--accent);
-  color: #fff;
+  color: var(--on-accent);
   font-weight: 600;
 }
 .btn:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
@@ -219,7 +236,7 @@ textarea { resize: vertical; }
 .filter-buttons button {
   background: var(--card);
   color: var(--ink);
-  border-color: #cfc9bb;
+  border-color: var(--field-border);
   font-weight: 500;
   padding: 0.4rem 0.9rem;
 }
@@ -227,7 +244,7 @@ textarea { resize: vertical; }
 .filter-buttons button[aria-pressed="true"] {
   background: var(--accent);
   border-color: var(--accent);
-  color: #fff;
+  color: var(--on-accent);
 }
 
 /* ---------- 状态提示与页脚 ---------- */
@@ -497,7 +514,7 @@ body.page-404 main {
 .honest {
   font-size: 0.85rem;
   color: var(--ink-soft);
-  background: #fffdf6;
+  background: var(--card-soft);
   border-left: 3px solid var(--gold);
   padding: 0.65rem 0.85rem;
   border-radius: 0 6px 6px 0;
@@ -550,7 +567,7 @@ body.page-404 main {
 }
 .wback {
   transform: rotateY(180deg);
-  background: #fffdf7;
+  background: var(--card-soft);
   padding: 0.7rem 0.75rem;
   display: flex;
   flex-direction: column;
@@ -596,7 +613,7 @@ body.page-404 main {
 .small { font-size: 0.78rem; color: var(--ink-soft); margin: 0; }
 .user-row { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin: 0 0 0.9rem; }
 .user-row label { font-size: 0.85rem; font-weight: 400; margin: 0; }
-.user-row input { font: inherit; padding: 0.45rem 0.6rem; border: 1px solid var(--line); border-radius: 6px; background: #fff; width: auto; max-width: 11rem; }
+.user-row input { font: inherit; padding: 0.45rem 0.6rem; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); width: auto; max-width: 11rem; }
 .user-row .btn { font-size: 0.85rem; padding: 0.4rem 0.8rem; }
 
 /* ---------- 参与：两个表单 ---------- */
@@ -611,16 +628,16 @@ body.page-404 main {
 .panel .field textarea { min-height: 5.2rem; }
 .panel .btn { font-size: 0.85rem; padding: 0.4rem 0.85rem; }
 .msg { font-size: 0.8rem; margin: 0.55rem 0 0; min-height: 1.1em; }
-.msg.ok { color: #1d7a3c; }
+.msg.ok { color: var(--ok); }
 .msg.bad { color: var(--accent); }
 .item-list { list-style: none; padding: 0; margin: 0.9rem 0 0; }
 .item-list li {
-  background: #fffdf7; border: 1px solid var(--line); border-radius: 8px;
+  background: var(--card-soft); border: 1px solid var(--line); border-radius: 8px;
   padding: 0.6rem 0.75rem; margin: 0 0 0.55rem; font-size: 0.86rem;
   display: flex; gap: 0.6rem; justify-content: space-between; align-items: flex-start;
 }
 .item-list .tag {
-  font-size: 0.68rem; background: var(--accent); color: #fff;
+  font-size: 0.68rem; background: var(--accent); color: var(--on-accent);
   border-radius: 99px; padding: 0.1rem 0.45rem; white-space: nowrap;
 }
 
@@ -635,7 +652,7 @@ body.page-404 main {
   counter-increment: s; content: counter(s);
   position: absolute; left: 0.9rem; top: 0.9rem;
   width: 1.5rem; height: 1.5rem; border-radius: 50%;
-  background: var(--accent); color: #fff; font-size: 0.8rem; font-weight: 700;
+  background: var(--accent); color: var(--on-accent); font-size: 0.8rem; font-weight: 700;
   display: grid; place-items: center;
 }
 
@@ -643,7 +660,7 @@ body.page-404 main {
 .gallery { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
 .gallery figure { margin: 0; }
 .shot {
-  background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
   overflow: hidden; cursor: zoom-in; display: block; padding: 0; width: 100%;
 }
 .shot:focus-visible { outline: 3px solid rgba(184, 20, 30, 0.3); outline-offset: 2px; }
@@ -655,12 +672,12 @@ body.page-404 main {
   display: none; place-items: center; padding: 2rem; z-index: 99; cursor: zoom-out;
 }
 .lightbox.is-open { display: grid; }
-.lightbox-stage { background: #fff; border-radius: var(--radius); padding: 0.5rem; max-width: min(92vw, 860px); }
+.lightbox-stage { background: var(--surface); border-radius: var(--radius); padding: 0.5rem; max-width: min(92vw, 860px); }
 .lightbox-stage img, .lightbox-stage svg { width: min(86vw, 820px); height: auto; display: block; }
-.lightbox-cap { color: #f3ece2; font-size: 0.85rem; text-align: center; margin: 0.7rem 0 0; }
+.lightbox-cap { color: var(--on-overlay); font-size: 0.85rem; text-align: center; margin: 0.7rem 0 0; }
 .lightbox-close {
   position: absolute; top: 1rem; right: 1.2rem; background: none; border: 0;
-  color: #f3ece2; font-size: 1.6rem; line-height: 1; cursor: pointer; padding: 0.3rem 0.6rem;
+  color: var(--on-overlay); font-size: 1.6rem; line-height: 1; cursor: pointer; padding: 0.3rem 0.6rem;
 }
 
 /* ===========================================================
@@ -677,16 +694,16 @@ body.page-404 main {
 .idx-kbd kbd {
   font-family: ui-monospace, Consolas, monospace; font-size: 0.7rem;
   border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 4px;
-  padding: 0.05rem 0.3rem; color: var(--ink-soft); background: #fff;
+  padding: 0.05rem 0.3rem; color: var(--ink-soft); background: var(--surface);
 }
 
 .chips { display: flex; flex-wrap: wrap; gap: 0.45rem; margin: 0 0 1rem; }
 .chip {
   font: inherit; font-size: 0.82rem; cursor: pointer; padding: 0.35rem 0.8rem;
-  border-radius: 99px; border: 1px solid var(--line); background: #fff; color: var(--ink-soft);
+  border-radius: 99px; border: 1px solid var(--line); background: var(--surface); color: var(--ink-soft);
 }
 .chip:hover { border-color: var(--accent); color: var(--accent); }
-.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
 .chip:focus-visible { outline: 3px solid rgba(184, 20, 30, 0.3); outline-offset: 2px; }
 .chip .n { opacity: 0.75; font-size: 0.75rem; margin-left: 0.25rem; }
 
@@ -705,11 +722,11 @@ body.page-404 main {
 .entry summary::-webkit-details-marker { display: none; }
 .entry summary::after { content: "＋"; margin-left: auto; color: var(--ink-soft); font-size: 0.9rem; flex: none; }
 .entry[open] summary::after { content: "－"; }
-.entry summary:hover { background: #fffdf8; }
+.entry summary:hover { background: var(--card-soft); }
 .entry summary:focus-visible { outline: 3px solid rgba(184, 20, 30, 0.3); outline-offset: -3px; }
 .entry .cat {
   font-size: 0.68rem; letter-spacing: 0.06em; color: var(--accent);
-  border: 1px solid #f0d4d2; background: #fdf3f2; border-radius: 4px;
+  border: 1px solid var(--cat-border); background: var(--cat-bg); border-radius: 4px;
   padding: 0.1rem 0.4rem; white-space: nowrap; flex: none;
 }
 .entry .title { font-weight: 700; font-size: 0.95rem; }
@@ -721,7 +738,7 @@ body.page-404 main {
 .entry .body .de { font-weight: 600; }
 .entry .links { margin: 0; padding: 0 1rem 1rem; font-size: 0.82rem; display: flex; flex-wrap: wrap; gap: 0.6rem; }
 .empty {
-  background: #fffdf7; border: 1px dashed var(--line); border-radius: var(--radius);
+  background: var(--card-soft); border: 1px dashed var(--line); border-radius: var(--radius);
   padding: 1.6rem 1rem; text-align: center; color: var(--ink-soft); font-size: 0.9rem;
 }
 
@@ -752,24 +769,24 @@ body.page-404 main {
 @media (min-width: 640px) { .options { grid-template-columns: 1fr 1fr; } }
 .opt {
   font: inherit; text-align: left; cursor: pointer; padding: 0.8rem 0.9rem;
-  border: 1px solid var(--line); border-radius: 8px; background: #fff; color: var(--ink);
+  border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--ink);
   display: flex; gap: 0.6rem; align-items: baseline;
   transition: border-color 0.15s, background 0.15s, transform 0.08s;
 }
-.opt:hover:not(:disabled) { border-color: var(--accent); background: #fffdf8; }
+.opt:hover:not(:disabled) { border-color: var(--accent); background: var(--card-soft); }
 .opt:active:not(:disabled) { transform: scale(0.995); }
 .opt:focus-visible { outline: 3px solid rgba(184, 20, 30, 0.3); outline-offset: 2px; }
 .opt .num {
   font-size: 0.72rem; color: var(--ink-soft); border: 1px solid var(--line);
   border-radius: 4px; padding: 0 0.3rem; flex: none; line-height: 1.5;
 }
-.opt.is-correct { border-color: #1d7a3c; background: #f1faf3; }
-.opt.is-wrong { border-color: var(--accent); background: #fdf1f1; }
+.opt.is-correct { border-color: var(--ok); background: var(--ok-bg); }
+.opt.is-wrong { border-color: var(--accent); background: var(--bad-bg); }
 .opt:disabled { cursor: default; }
 .opt.is-dim { opacity: 0.5; }
 
 .feedback { margin: 1rem 0 0; font-size: 0.88rem; min-height: 1.2em; }
-.feedback.ok { color: #1d7a3c; }
+.feedback.ok { color: var(--ok); }
 .feedback.bad { color: var(--accent); }
 .feedback .ex { display: block; color: var(--ink-soft); font-size: 0.82rem; margin-top: 0.3rem; }
 .q-actions { display: flex; gap: 0.6rem; flex-wrap: wrap; margin: 1.1rem 0 0; }
@@ -788,7 +805,7 @@ body.page-404 main {
 .result .wrong-head { font-size: 0.95rem; text-align: left; margin: 1.4rem 0 0.6rem; }
 .result .wrong-list { text-align: left; list-style: none; padding: 0; margin: 0; }
 .result .wrong-list li {
-  background: #fffdf7; border: 1px solid var(--line); border-radius: 8px;
+  background: var(--card-soft); border: 1px solid var(--line); border-radius: 8px;
   padding: 0.6rem 0.75rem; margin: 0 0 0.55rem; font-size: 0.86rem;
 }
 .result .wrong-list .de { font-weight: 700; }
@@ -816,7 +833,7 @@ body.page-404 main {
   top: 0;
   z-index: 200;
   background: var(--accent);
-  color: #fff;
+  color: var(--on-accent);
   padding: 0.6rem 1rem;
   border-radius: 0 0 8px 0;
   font-weight: 600;
@@ -824,7 +841,7 @@ body.page-404 main {
 }
 .skip-link:focus {
   left: 0;
-  color: #fff;
+  color: var(--on-accent);
 }
 
 /* 视觉隐藏但仍被屏幕阅读器读到（用于补标题层级） */
@@ -852,3 +869,86 @@ body.page-404 main {
   overflow-wrap: anywhere;
 }
 .mail-box .btn { font-size: 0.85rem; padding: 0.4rem 0.85rem; }
+
+
+/* ===========================================================
+   深色模式
+   -----------------------------------------------------------
+   只覆盖变量，组件规则一条都不用改 —— 这就是把颜色抽成
+   变量的意义：换主题 = 换一组值。
+   =========================================================== */
+html[data-theme="dark"] {
+  color-scheme: dark;          /* 让滚动条、表单控件也跟着变暗 */
+
+  --ink: #ecebe4;
+  --ink-soft: #b3b0a5;
+  --paper: #16140f;            /* 暖调近黑，比纯黑柔和 */
+  --card: #1e1b16;
+  --card-soft: #241f19;
+  --surface: #221e18;
+  --line: #37322a;
+
+  --accent: #e2565e;           /* 深底上用亮一点的红，否则发闷 */
+  --accent-dark: #c8404a;
+  --gold: #d9ad55;
+  --on-accent: #ffffff;
+
+  --thead: #262119;
+  --row-hover: #241f19;
+  --field-border: #3d372d;
+  --field-border-hover: #5c543f;
+
+  --ok: #4ccd80;
+  --ok-bg: #12291c;
+  --bad-bg: #2b1618;
+  --cat-border: #5d3a3a;
+  --cat-bg: #2a1c1c;
+  --chip-bg: #2a251e;
+  --overlay: rgba(0, 0, 0, 0.92);
+  --on-overlay: #ece7dc;
+}
+
+/* 切换时给个大范围的过渡，别硬切（系统开了"减少动效"就不动） */
+body, .card, .wcard, .panel, .entry, .mini-card, .opt, .chip,
+.site-header, .site-footer, table, th, td, input, select, textarea {
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  body, .card, .wcard, .panel, .entry, .mini-card, .opt, .chip,
+  .site-header, .site-footer, table, th, td, input, select, textarea {
+    transition: none;
+  }
+}
+
+/* ---------- 深浅色按钮 ---------- */
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  padding: 0;
+  cursor: pointer;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--ink);
+}
+.theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
+.theme-toggle:focus-visible {
+  outline: 3px solid rgba(184, 20, 30, 0.3);
+  outline-offset: 2px;
+}
+
+/* 按钮上显示"点了会变成什么"：深色时给太阳，浅色时给月亮 */
+html[data-theme="dark"] .theme-toggle__moon { display: none; }
+html:not([data-theme="dark"]) .theme-toggle__sun { display: none; }
+
+/* 灯箱/遮罩在深色下不用再压一层白 */
+html[data-theme="dark"] .lightbox-stage { background: var(--card); }
