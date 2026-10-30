@@ -10,6 +10,9 @@
 </head>
 <body>
 
+  <a class="skip-link" href="#main" data-i18n="skip.link">跳到主要内容</a>
+
+
   <header>
     <div class="header-top">
       <p class="site-title"><a href="index.html" data-i18n="site.title">Deutsch-Lernzimmer 德语自习室</a></p>
@@ -28,7 +31,7 @@
     </nav>
   </header>
 
-  <main>
+  <main id="main">
     <h1 data-i18n="wissen.h1">知识索引</h1>
     <p class="idx-lead" data-i18n="wissen.lead">站里能用的东西都按类列在这里：8 个必补语法点、四条能力线怎么练、用什么材料、踩过的坑。搜一个关键词，或者点下面的分类。</p>
 
@@ -51,6 +54,8 @@
     </div>
 
     <p class="idx-count" role="status" aria-live="polite"><span data-i18n="wissen.show">显示</span> <b id="shown">20</b> / <b id="total">20</b> <span data-i18n="wissen.items">条</span></p>
+
+    <h2 class="visually-hidden">全部条目</h2>
 
     <div id="list">
     <details class="entry" data-cat="grammatik">

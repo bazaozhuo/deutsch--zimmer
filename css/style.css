@@ -806,3 +806,29 @@ body.page-404 main {
   .q-word { font-size: 1.4rem; }
   .stats { justify-content: flex-start; gap: 0.9rem; }
 }
+
+/* ---------- 跳到主要内容 ----------
+   键盘用户按第一下 Tab 就能跳过导航，直接进正文。
+   平时藏在屏幕外，聚焦时才出现在左上角。 */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 200;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 0 0 8px 0;
+  font-weight: 600;
+  text-decoration: none;
+}
+.skip-link:focus {
+  left: 0;
+  color: #fff;
+}
+
+/* 视觉隐藏但仍被屏幕阅读器读到（用于补标题层级） */
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; margin: -1px;
+  padding: 0; border: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+}

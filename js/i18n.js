@@ -124,6 +124,8 @@
       "contact.note": "Note: this is a course project with no backend server. The form validates in the browser and shows a confirmation only — it does not actually send an email. That is a deliberate design trade-off, not a defect.",
 
       /* ---------- W4 新增：首页改版 / 知识索引 / 单词挑战 ---------- */
+      "skip.link": "Skip to main content",
+
       /* nav（W4 新增） */
       "nav.index": "Knowledge index",
       "nav.challenge": "Word challenge",
