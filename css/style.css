@@ -952,3 +952,51 @@ html:not([data-theme="dark"]) .theme-toggle__sun { display: none; }
 
 /* 灯箱/遮罩在深色下不用再压一层白 */
 html[data-theme="dark"] .lightbox-stage { background: var(--card); }
+
+
+/* ===========================================================
+   顶部标题与导语居中
+   -----------------------------------------------------------
+   只改文字对齐，不动任何盒子的宽高/间距/断点，
+   所以手机端边界和以前一样（表格、卡片、表单仍左对齐）。
+   =========================================================== */
+
+/* 1) 每个页面的 h1 */
+main > h1,
+main > section > h1,
+main > section > div > h1 {
+  text-align: center;
+  text-wrap: balance;          /* 居中后标题换行更均匀，不影响宽度 */
+}
+
+/* 2) 紧跟 h1 的那一段导语（各页 class 不一样，用相邻选择器统一处理） */
+main > h1 + p,
+main > section > h1 + p,
+main > section > div > h1 + p {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 3) 首页 hero 的那一组（kicker / h1 / lead / 按钮 / 说明） */
+.hero-grid .kicker,
+.hero-grid h1,
+.hero-grid .lead,
+.hero-grid .honest {
+  text-align: center;
+}
+.hero-grid .hero-cta {
+  justify-content: center;
+}
+.hero-grid .honest {
+  text-align: center;   /* 只居中文字，左侧金线保持原样 */
+}
+
+/* 4) 404 卡片本来就居中，这里只保证标题真正水平居中 */
+.error-card h1 { text-align: center; }
+
+/* 5) 各区块的小标题（h2）也居中；下面的卡片/表格仍左对齐 */
+main > section > h2,
+main > section > h2 + p {
+  text-align: center;
+}
