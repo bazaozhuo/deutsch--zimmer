@@ -499,7 +499,8 @@ body.page-404 main {
 .hero-grid {
   display: grid;
   gap: 2rem;
-  margin: 0 0 1rem;
+  /* 左右必须 auto：main > * 的居中规则会被这里的简写 margin 覆盖掉 */
+  margin: 0 auto 1rem;
 }
 @media (min-width: 860px) {
   .hero-grid { grid-template-columns: 1.15fr 0.85fr; align-items: center; }
@@ -952,3 +953,22 @@ html:not([data-theme="dark"]) .theme-toggle__sun { display: none; }
 
 /* 灯箱/遮罩在深色下不用再压一层白 */
 html[data-theme="dark"] .lightbox-stage { background: var(--card); }
+
+
+/* ===========================================================
+   内容列居中（真正的修法）
+   -----------------------------------------------------------
+   之前靠 `main > * { margin: auto }` 居中，但 h1 / p / section
+   自己的 `margin: 0 0 1rem` 简写跟它同权重、且写在后面，
+   把左右 auto 覆盖成 0 —— 于是宽屏下整块内容贴左边。
+   改用容器 padding 居中，子元素的 margin 怎么写都不影响。
+   只在 ≥761px 生效，手机端的 padding 保持原值不变。
+   =========================================================== */
+@media (min-width: 761px) {
+  header,
+  main,
+  footer {
+    padding-left: max(1.25rem, calc((100% - var(--max-width)) / 2));
+    padding-right: max(1.25rem, calc((100% - var(--max-width)) / 2));
+  }
+}
