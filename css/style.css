@@ -952,3 +952,74 @@ html:not([data-theme="dark"]) .theme-toggle__sun { display: none; }
 
 /* 灯箱/遮罩在深色下不用再压一层白 */
 html[data-theme="dark"] .lightbox-stage { background: var(--card); }
+
+
+/* ===========================================================
+   全站居中：标题 / 导语 / 插图 / 搜索区
+   -----------------------------------------------------------
+   只改对齐与 hero 的堆叠方式，不动字号、间距数值与断点。
+   表格、卡片内部文字仍左对齐（居中会难读）。
+   =========================================================== */
+
+/* 1) 页首标题 */
+main > h1,
+main > section > h1,
+main > section > div > h1 {
+  text-align: center;
+  text-wrap: balance;
+}
+
+/* 2) 紧跟标题的导语 */
+main > h1 + p,
+main > section > h1 + p,
+main > section > div > h1 + p {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 3) 区块小标题与其后一段说明 */
+main > section > h2,
+main > section > h2 + p {
+  text-align: center;
+}
+
+/* 4) 首页 hero：文字居中，插图移到下方居中（单列堆叠） */
+.hero-grid { grid-template-columns: 1fr; }
+@media (min-width: 860px) {
+  .hero-grid { grid-template-columns: 1fr; justify-items: center; }
+}
+.hero-grid .kicker,
+.hero-grid h1,
+.hero-grid .lead,
+.hero-grid .honest {
+  text-align: center;
+}
+.hero-grid .hero-cta { justify-content: center; }
+.hero-fig {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 620px;
+}
+
+/* 5) 插图与图库 */
+.gallery figure,
+.shot {
+  margin-left: auto;
+  margin-right: auto;
+}
+.gallery figcaption { text-align: center; }
+
+/* 6) 词汇表的搜索区（找词） */
+.filter { text-align: center; }
+.filter .field { text-align: center; margin-left: auto; margin-right: auto; }
+.filter .filter-label { text-align: center; }
+.filter-buttons { justify-content: center; }
+
+/* 7) 知识索引的搜索区 */
+.idx-search {
+  text-align: center;
+}
+.idx-search > label { text-align: center; }
+.idx-search .idx-kbd { justify-content: center; }
