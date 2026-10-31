@@ -952,3 +952,23 @@ html:not([data-theme="dark"]) .theme-toggle__sun { display: none; }
 
 /* 灯箱/遮罩在深色下不用再压一层白 */
 html[data-theme="dark"] .lightbox-stage { background: var(--card); }
+
+
+/* ===========================================================
+   仅首页：顶部内容居中（其它页面保持原样）
+   -----------------------------------------------------------
+   通过 body.page-home 限定作用域，只影响 index.html。
+   只改文字对齐与按钮行居中，不动宽度/间距/断点。
+   =========================================================== */
+.page-home .hero-grid .kicker,
+.page-home .hero-grid h1,
+.page-home .hero-grid .lead,
+.page-home .hero-grid .honest {
+  text-align: center;
+}
+.page-home .hero-grid h1 { text-wrap: balance; }
+.page-home .hero-grid .hero-cta { justify-content: center; }
+.page-home main > section > h2,
+.page-home main > section > h2 + p {
+  text-align: center;
+}
