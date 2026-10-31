@@ -1,6 +1,6 @@
 # 德语自习室 Deutsch-Lernzimmer
 
-**线上网址：<https://bazaozhuo.github.io/my-website/>** ✅ 已上线
+**线上网址：<https://bazaozhuo.github.io/deutsch--Zimmer/>** ✅ 已上线
 
 ## 这是什么
 Web Development 课程项目。**截止 2026-11-10（周二）**，开发期 4 周。
