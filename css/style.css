@@ -972,3 +972,11 @@ html[data-theme="dark"] .lightbox-stage { background: var(--card); }
     padding-right: max(1.25rem, calc((100% - var(--max-width)) / 2));
   }
 }
+
+/* 按钮不要下划线：<a class="btn"> 默认会带链接下划线，截图里像删除线 */
+.btn,
+.btn-ghost,
+.btn:focus,
+.btn-ghost:focus {
+  text-decoration: none;
+}
